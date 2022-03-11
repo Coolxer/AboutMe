@@ -1,28 +1,27 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document';
+import SEO from 'components/SEO/seo';
 
-class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
+const Document = () => (
+    <Html lang="pl ">
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
-            rel="stylesheet"
-          />
+            <SEO />
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossOrigin="true"
+            />
+            <link
+                href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@100&display=swap"
+                rel="stylesheet"
+            />
         </Head>
         <body>
-          <Main />
-          <NextScript />
+            <Main />
+            <NextScript />
         </body>
-      </Html>
-    );
-  }
-}
+    </Html>
+);
 
-export default MyDocument;
-
-// this was to add the font BUT
-
-// Note that we don't recommend adding fonts with next/head,
-// as this only applies the font to the particular page and won't work with
-//  a streaming architecture.
+export default Document;
