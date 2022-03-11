@@ -36,3 +36,12 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# eslint
+.eslintrc
+
+# prettier
+.prettierrc
+
+# husky
+/.husky
