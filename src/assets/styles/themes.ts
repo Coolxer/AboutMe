@@ -6,7 +6,15 @@ export const themes = {
     light: {
         palette: {
             primary: color.green,
+            text: color.black,
             background: color.white,
+
+            error: color.red,
+            success: color.green,
+            info: color.blue,
+            warning: color.yellow,
+
+            color,
         },
         font,
         device,
@@ -14,7 +22,15 @@ export const themes = {
     dark: {
         palette: {
             primary: color.green,
+            text: color.black,
             background: color.black,
+
+            error: color.red,
+            success: color.green,
+            info: color.blue,
+            warning: color.yellow,
+
+            color,
         },
         font,
         device,

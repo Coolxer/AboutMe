@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import SEO from 'components/SEO/seo';
+import SEO from 'components/SEO/SEO';
 
 const Document = () => (
     <Html lang="pl ">
