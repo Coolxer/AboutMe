@@ -1,15 +1,12 @@
 import type { AppProps } from 'next/app';
 import { GlobalStyles } from 'assets/styles/globalStyles';
-import { themes } from 'assets/styles/themes';
+import { theme } from 'assets/styles/theme';
 
-import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-    const [theme, setTheme] = useState<string>('light');
-
     return (
-        <ThemeProvider theme={themes[theme]}>
+        <ThemeProvider theme={theme}>
             <GlobalStyles />
             <Component {...pageProps} />
         </ThemeProvider>

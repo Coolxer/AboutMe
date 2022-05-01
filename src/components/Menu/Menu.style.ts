@@ -1,46 +1,77 @@
 import styled from 'styled-components';
 
-export const Menu = styled.nav`
-    position: absolute; //fixed
+import Button from 'components/Button/Button';
+
+export const Menu = styled.nav<{ isOpen: boolean }>`
+    position: fixed;
     left: 0;
     top: 80px;
 
     width: 100%;
-    height: calc(100% - 80px); // 100vh; z-index: 9998;
+    height: calc(100% - 80px);
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 
-    background-color: ${({ theme }) => theme.palette.background};
+    padding: 20px 0;
+
+    background-color: ${({ theme }) => theme.palette.dominant};
+
+    transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+    transition: transform 0.5s ease-in-out;
 
     ul {
         width: 100%;
-        list-style-type: none;
 
         li {
+            width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 10px;
-            margin: 10px 0;
 
-            background-color: ${({ theme }) => theme.palette.color.lightGray};
-            color: ${({ theme }) => theme.palette.text};
-            font-weight: bold;
-            font-size: 2rem;
+            a {
+                width: 75%;
+                display: flex;
+                justify-content: center;
 
-            opacity: 0.8;
+                padding: 10px;
+                margin: 10px 0;
 
-            transition: background-color 0.2s ease-in-out,
-                opacity 0.2s ease-in-out;
+                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-size: ${({ theme }) => theme.font.size.l};
+                text-decoration: none;
 
-            &:hover {
-                background-color: ${({ theme }) => theme.palette.primary};
-                opacity: 1;
-                cursor: pointer;
+                background-color: ${({ theme }) => theme.palette.secondary};
+                color: ${({ theme }) => theme.palette.dominant};
+                box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
+
+                transition: background-color 0.2s ease-in-out,
+                    box-shadow 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: ${({ theme }) => theme.palette.accent};
+                    box-shadow: 0 0 10px 0
+                        ${({ theme }) => theme.palette.accent};
+                    cursor: pointer;
+                }
             }
         }
+    }
+`;
+
+export const CircleButton = styled(Button)`
+    width: ${({ theme }) => theme.font.size.xxl};
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    box-shadow: none;
+
+    background-color: transparent;
+
+    .icon {
+        font-size: ${({ theme }) => theme.font.size.xxxl};
+        color: ${({ theme }) => theme.palette.accent};
     }
 `;

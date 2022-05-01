@@ -1,17 +1,26 @@
 import * as Styled from 'components/Menu/Menu.style';
+import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-const menuItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+const items = ['home', 'about', 'skills', 'projects', 'contact'];
 
-const Menu = () => {
+type Props = {
+    isOpen: boolean;
+    onClick: () => void;
+};
+
+const MobileMenu = ({ isOpen, onClick }: Props) => {
     return (
-        <Styled.Menu>
+        <Styled.Menu isOpen={isOpen}>
             <ul>
-                {menuItems.map((item) => (
-                    <li key={item}>{item}</li>
+                {items.map((item) => (
+                    <li key={item}>
+                        <a href={'#' + item}> {item.toUpperCase()}</a>
+                    </li>
                 ))}
             </ul>
+            <Styled.CircleButton icon={faCircleChevronLeft} onClick={onClick} />
         </Styled.Menu>
     );
 };
 
-export default Menu;
+export default MobileMenu;

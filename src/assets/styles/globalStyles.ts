@@ -11,10 +11,18 @@ export const GlobalStyles = styled.createGlobalStyle`
 
     html {
         font-size: 62.5%; // make 10px is base font-size to easy calculating
-        font-family: 'Roboto', sans-serif;
     }
 
     body {
         font-size: 1.6rem; // restore basic 16px font-size
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
     }
 `;
