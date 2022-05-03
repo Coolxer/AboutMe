@@ -1,18 +1,20 @@
 import Image from 'next/image';
 
 import * as Styled from 'components/Logo/Logo.style';
-import LogoGrayed from 'assets/images/logo_grayed.svg';
-import LogoColorized from 'assets/images/logo_colorized.svg';
+import LogoWhited from 'assets/images/logo/whited.svg';
+import LogoGrayed from 'assets/images/logo/grayed.svg';
+import LogoColorized from 'assets/images/logo/colorized.svg';
 
 type Props = {
+    grayed?: boolean;
     colorized?: boolean;
     big?: boolean;
 };
 
-const Logo = ({ colorized, big }: Props) => (
+const Logo = ({ grayed, colorized, big }: Props) => (
     <Styled.Wrapper big={big}>
         <Image
-            src={colorized ? LogoColorized : LogoGrayed}
+            src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="Logo"
             layout="responsive"
         />

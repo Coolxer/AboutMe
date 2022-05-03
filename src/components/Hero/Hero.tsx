@@ -6,8 +6,6 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import HeroRectangles from 'assets/images/hero_rectangles.svg';
 
-import Button from 'components/Button/Button';
-
 const Hero = () => {
     return (
         <Styled.Wrapper>

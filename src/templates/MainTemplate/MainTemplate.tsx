@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Header from 'components/Header/Header';
+import NavigationHeader from 'components/NavigationHeader/NavigationHeader';
 
 const Wrapper = styled.div`
     width: 100vw;
@@ -13,7 +13,7 @@ type Props = {
 
 const MainTemplate = ({ children }: Props) => (
     <Wrapper>
-        <Header />
+        <NavigationHeader />
         {/* <Footer /> */}
         {children}
     </Wrapper>

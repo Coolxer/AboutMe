@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const Hamburger = styled.button`
     text-decoration: none;
     border: none;
-    background: transparent;
+    //background: ${({ theme }) => theme.font.size.xl};
     font-size: ${({ theme }) => theme.font.size.xl};
 
     color: ${({ theme }) => theme.palette.secondary};
