@@ -5,6 +5,11 @@ import NavigationHeader from 'components/NavigationHeader/NavigationHeader';
 const Wrapper = styled.div`
     width: 100vw;
     min-height: 100vh;
+
+    background-color: ${({ theme }) => theme.palette.dominant};
+    color: ${({ theme }) => theme.palette.secondary};
+
+    font-family: ${({ theme }) => theme.font.family.roboto};
 `;
 
 type Props = {

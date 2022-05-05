@@ -15,5 +15,7 @@ export const Wrapper = styled.header`
     background-color: ${({ theme }) => theme.palette.dominant};
     //box-shadow: 0 0 2px 2px ${({ theme }) => theme.palette.shadow};
 
-    z-index: 99;
+    z-index: 100;
+
+    border-bottom: 2px solid ${({ theme }) => theme.palette.secondary};
 `;

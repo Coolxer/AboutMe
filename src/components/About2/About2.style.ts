@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
     width: 100%;
-    height: 100vh;
 
     display: flex;
     flex-direction: row;
@@ -10,6 +9,8 @@ export const Wrapper = styled.section`
 
     position: relative;
     overflow: hidden;
+
+    margin-top: 30px;
 
     align-content: flex-start;
 
@@ -23,7 +24,6 @@ export const Wrapper = styled.section`
 
         padding: 5px;
 
-        font-family: ${({ theme }) => theme.font.family.roboto};
         font-size: ${({ theme }) => theme.font.size.s};
         text-align: center;
 
@@ -31,6 +31,8 @@ export const Wrapper = styled.section`
         color: ${({ theme }) => theme.palette.dominant};
 
         box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
+
+        z-index: 10;
     }
 
     .empty {
@@ -47,6 +49,6 @@ export const Wrapper = styled.section`
         top: 0;
 
         opacity: 0.5;
-        z-index: -1;
+        z-index: 0;
     }
 `;

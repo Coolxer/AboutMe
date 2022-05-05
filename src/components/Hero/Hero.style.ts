@@ -8,11 +8,6 @@ export const Wrapper = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-color: ${({ theme }) => theme.palette.dominant};
-
-    font-family: ${({ theme }) => theme.font.family.roboto};
-    color: ${({ theme }) => theme.palette.secondary};
 `;
 
 export const HelloHeader = styled.h1`

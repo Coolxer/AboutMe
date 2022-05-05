@@ -30,7 +30,7 @@ const Button = ({
     onClick,
 }: Props) => {
     return (
-        <Styled.Button
+        <Styled.Wrapper
             secondary={secondary}
             disabled={disabled}
             big={big}
@@ -40,7 +40,7 @@ const Button = ({
             onClick={onClick}>
             {text}
             {icon && <FontAwesomeIcon className="icon" icon={icon} />}
-        </Styled.Button>
+        </Styled.Wrapper>
     );
 };
 

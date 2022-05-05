@@ -5,11 +5,13 @@ export const Wrapper = styled.div`
     height: 70px;
     padding: 10px;
 
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-top: 45px;
+    margin: 50px 0 30px 0;
 
     font-size: ${({ theme }) => theme.font.size.l};
 
@@ -18,7 +20,11 @@ export const Wrapper = styled.div`
     box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
 
     .icon {
-        padding-left: 10px;
+        position: absolute;
+        right: 0;
+
+        padding-right: 10px;
+
         font-size: ${({ theme }) => theme.font.size.xl};
     }
 `;
