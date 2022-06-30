@@ -25,4 +25,8 @@ export const GlobalStyles = styled.createGlobalStyle`
     h6 {
         font-weight: normal;
     }
+
+    a {
+        text-decoration: none;
+    }
 `;

@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Button from 'components/Button/Button';
+
 import * as Styled from 'components/ProjectBox/ProjectBox.style';
-import { useState } from 'react';
+import Button from 'components/Button/Button';
 
 type Props = {
     title: string;
@@ -31,25 +32,21 @@ const ProjectBox = ({
                         text="Show less"
                         icon={faChevronUp}
                         onClick={() => setIsExpanded(false)}
-                        rounded
-                        glowed
                     />
                 ) : (
                     <Button
                         text="Show more"
                         icon={faChevronDown}
                         onClick={() => setIsExpanded(true)}
-                        rounded
-                        glowed
                     />
                 )}
-                <Button
-                    text="Github"
-                    icon={faGithub}
-                    onClick={() => console.log('move to the github')}
-                    rounded
-                    glowed
-                />
+                <a href={githubLink} target="_blank" rel="noreferrer">
+                    <Button
+                        text="Github"
+                        icon={faGithub}
+                        onClick={(): void => {}}
+                    />
+                </a>
             </div>
         </Styled.Wrapper>
     );

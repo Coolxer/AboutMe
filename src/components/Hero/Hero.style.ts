@@ -1,13 +1,10 @@
 import styled from 'styled-components';
+import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.header`
+    ${mixins.flexCol};
     width: 100%;
     height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 `;
 
 export const HelloHeader = styled.h1`
@@ -16,10 +13,11 @@ export const HelloHeader = styled.h1`
 
 export const NameHeader = styled.h1`
     display: block;
-    background-color: ${({ theme }) => theme.palette.secondary};
     padding: 0 5px;
 
     font-size: ${({ theme }) => theme.font.size.xl};
+
+    background-color: ${({ theme }) => theme.palette.secondary};
     color: ${({ theme }) => theme.palette.accent};
 `;
 
@@ -32,21 +30,20 @@ export const HobbyHeader = styled.h3`
 `;
 
 export const LocationHeader = styled.h4`
-    display: flex;
-    align-items: center;
+    ${mixins.flex};
 
     font-size: ${({ theme }) => theme.font.size.xs};
 
     .icon {
+        padding: 5px;
         font-size: ${({ theme }) => theme.font.size.l};
         color: ${({ theme }) => theme.palette.accent};
-        padding: 5px;
     }
 `;
 
 export const Image = styled.div`
-    width: 240px;
-
     position: absolute;
     bottom: 0;
+
+    width: 240px;
 `;

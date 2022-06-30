@@ -4,7 +4,7 @@ import SectionHeader from 'components/SectionHeader/SectionHeader';
 
 const About = () => (
     <Styled.Wrapper>
-        <SectionHeader text={'About'} icon={faUser} />
+        <SectionHeader text="about" icon={faUser} />
         <article>
             <p>
                 My name is Łukasz Miłoś. I am a software developer, it and

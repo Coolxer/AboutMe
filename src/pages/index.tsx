@@ -6,6 +6,7 @@ import About from 'components/About/About';
 import About2 from 'components/About2/About2';
 import Skills from 'components/Skills/Skills';
 import Projects from 'components/Projects/Projects';
+import Contact from 'components/Contact/Contact';
 
 const Home: NextPage = () => (
     <MainTemplate>
@@ -14,6 +15,7 @@ const Home: NextPage = () => (
         <About2 />
         <Skills />
         <Projects />
+        <Contact />
     </MainTemplate>
 );
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
     width: 100%;
@@ -6,20 +7,15 @@ export const Wrapper = styled.section`
     background-color: ${({ theme }) => theme.palette.dominant};
 
     .skills-row {
-        width: 100%;
-
-        display: flex;
+        ${mixins.flex};
         justify-content: space-around;
-        align-items: center;
 
+        width: 100%;
         padding: 10px;
 
         .skill-col {
+            ${mixins.flex};
             width: 100%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
             &:nth-child(2) {
                 border-left: 2px solid ${({ theme }) => theme.palette.secondary};

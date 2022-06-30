@@ -1,27 +1,22 @@
 import styled from 'styled-components';
+import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
     position: relative;
     overflow: hidden;
 
-    margin-top: 30px;
-
+    ${mixins.flexRow};
+    flex-wrap: wrap;
     align-content: flex-start;
 
+    width: 100%;
+    margin-top: 30px;
+
     .profession {
+        ${mixins.flex};
+
         width: 50%;
         height: 60px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         padding: 5px;
 
         font-size: ${({ theme }) => theme.font.size.s};
@@ -31,7 +26,6 @@ export const Wrapper = styled.section`
         color: ${({ theme }) => theme.palette.dominant};
 
         box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
-
         z-index: 10;
     }
 
@@ -41,12 +35,12 @@ export const Wrapper = styled.section`
     }
 
     .face {
-        width: 100%;
-        height: auto;
-
         position: absolute;
         left: 0;
         top: 0;
+
+        width: 100%;
+        height: auto;
 
         opacity: 0.5;
         z-index: 0;

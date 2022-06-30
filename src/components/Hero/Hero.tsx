@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import * as Styled from 'components/Hero/Hero.style';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
+import * as Styled from 'components/Hero/Hero.style';
 import HeroRectangles from 'assets/images/hero_rectangles.svg';
 
 const Hero = () => {
@@ -26,8 +25,6 @@ const Hero = () => {
                     layout="responsive"
                 />
             </Styled.Image>
-
-            {/*<Button text="Follow me" big glowed rounded />*/}
         </Styled.Wrapper>
     );
 };

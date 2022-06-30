@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Hamburger = styled.button`
-    text-decoration: none;
-    border: none;
-    //background: ${({ theme }) => theme.font.size.xl};
     font-size: ${({ theme }) => theme.font.size.xl};
 
+    text-decoration: none;
+    border: none;
+
+    background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.secondary};
 `;
 

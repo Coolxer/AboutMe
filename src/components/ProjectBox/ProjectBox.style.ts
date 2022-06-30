@@ -1,32 +1,26 @@
 import styled from 'styled-components';
+import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.div`
     width: 90%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    border: 5px solid ${({ theme }) => theme.palette.secondary};
-    padding: 10px;
+    ${mixins.flexCol}
 
     margin: 10px 0;
+    padding: 10px;
+    border: 5px solid ${({ theme }) => theme.palette.secondary};
 
     .header {
         width: 100%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        ${mixins.flex};
+        padding: 5px;
 
         font-family: ${({ theme }) => theme.font.family.roboto};
         font-size: ${({ theme }) => theme.font.size.m};
 
-        padding: 5px;
-
-        color: ${({ theme }) => theme.palette.dominant};
         background-color: ${({ theme }) => theme.palette.secondary};
+        color: ${({ theme }) => theme.palette.dominant};
     }
 
     .description {
@@ -37,8 +31,7 @@ export const Wrapper = styled.div`
     .buttons {
         width: 100%;
 
-        display: flex;
+        ${mixins.flex};
         justify-content: space-evenly;
-        align-items: center;
     }
 `;
