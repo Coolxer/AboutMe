@@ -9,12 +9,18 @@ type Props = {
     text: string;
     icon?: IconDefinition;
 
+    className?: string;
+
     onClick?: () => void;
 };
 
-const Button = ({ disabled, big, text, icon, onClick }: Props) => {
+const Button = ({ disabled, big, text, icon, className, onClick }: Props) => {
     return (
-        <Styled.Wrapper disabled={disabled} big={big} onClick={onClick}>
+        <Styled.Wrapper
+            disabled={disabled}
+            big={big}
+            className={className}
+            onClick={onClick}>
             <span>{text}</span>
             {icon && <FontAwesomeIcon className="icon" icon={icon} />}
         </Styled.Wrapper>

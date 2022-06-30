@@ -13,7 +13,7 @@ export const Wrapper = styled.header`
     padding: 10px;
 
     background-color: ${({ theme }) => theme.palette.accent};
-    //box-shadow: 0 0 2px 2px ${({ theme }) => theme.palette.shadow};
+    box-shadow: 0 0 20px 2px ${({ theme }) => theme.palette.shadow};
 
     z-index: 100;
 `;

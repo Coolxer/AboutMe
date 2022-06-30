@@ -47,10 +47,10 @@ const Footer = () => (
                         <a href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a href="projects">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a href="contact">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -59,11 +59,10 @@ const Footer = () => (
                     <span>ADDRESS</span>
                     <FontAwesomeIcon icon={faLocation} />
                 </div>
-                <span className="location">Borowa, Polska</span>
-                <span className="prefer">(Prefer remote)</span>
-                <span className="email">lukasz.milos@int.pl</span>
-
-                <Button text="Get CV" icon={faFile} />
+                <span>Borowa, Polska</span>
+                <span>(Prefer remote)</span>
+                <span>lukasz.milos@int.pl</span>
+                <Button className="cv-btn" text="Get CV" icon={faFile} />
             </div>
         </div>
         <div className="copyright">

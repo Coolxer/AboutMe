@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
+import SmoothCollapse from 'react-smooth-collapse';
 import * as Styled from 'components/ProjectBox/ProjectBox.style';
 import Button from 'components/Button/Button';
 
@@ -23,9 +24,17 @@ const ProjectBox = ({
     return (
         <Styled.Wrapper>
             <div className="header">{title.toUpperCase()}</div>
+
             <div className="description">
-                <p>{isExpanded ? longDescription : shortDescription}</p>
+                <p>
+                    <b>{shortDescription}</b>
+                </p>
+                <br />
+                <SmoothCollapse expanded={isExpanded}>
+                    <p>{longDescription}</p>
+                </SmoothCollapse>
             </div>
+
             <div className="buttons">
                 {isExpanded ? (
                     <Button
