@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import nodemailer from 'nodemailer';
 import {
     faAt,
     faContactBook,
@@ -12,14 +13,18 @@ import SectionHeader from 'components/SectionHeader/SectionHeader';
 import Button from 'components/Button/Button';
 
 const Contact = () => {
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
+    const [submitted, setSubmitted] = useState<boolean>(false);
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('send');
+
         if (email && message) {
-            setEmail('');
-            setMessage('');
-        } else console.log('fill in details');
+            let data = { email, message };
+        }
     };
 
     return (
@@ -53,6 +58,7 @@ const Contact = () => {
                 icon={faPaperPlane}
                 onClick={handleSubmit}
             />
+            <input type="submit" />
         </Styled.Wrapper>
     );
 };

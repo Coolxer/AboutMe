@@ -9,6 +9,10 @@ export const Hamburger = styled.button`
 
     background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.secondary};
+
+    @media ${({ theme }) => theme.device.laptop} {
+        display: none;
+    }
 `;
 
 export const Icon = styled(FontAwesomeIcon)<{ open?: boolean }>`

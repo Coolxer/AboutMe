@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
-import Button from 'components/Button/Button';
 
 export const Menu = styled.nav<{ isOpen: boolean }>`
     position: fixed;
@@ -19,8 +18,26 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
     transition: transform 0.5s ease-in-out;
 
+    @media ${({ theme }) => theme.device.laptop} {
+        position: static;
+
+        ${mixins.flex};
+        align-items: flex-end;
+
+        height: 100%;
+
+        transform: none;
+        transition: none;
+    }
+
     ul {
         width: 100%;
+
+        @media ${({ theme }) => theme.device.laptop} {
+            ${mixins.flexRow};
+
+            width: 50%;
+        }
 
         li {
             ${mixins.flex};
@@ -53,26 +70,20 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                         ${({ theme }) => theme.palette.accent};
                     cursor: pointer;
                 }
+
+                @media ${({ theme }) => theme.device.laptop} {
+                    font-size: ${({ theme }) => theme.font.size.m};
+
+                    border: none;
+                    background-color: ${({ theme }) => theme.palette.accent};
+                    box-shadow: none;
+
+                    &:hover {
+                        background-color: ${({ theme }) =>
+        theme.palette.accent};
+                    }
+                }
             }
-        }
-    }
-`;
-
-export const CircleButton = styled(Button)`
-    ${mixins.flex};
-
-    border: none;
-    box-shadow: none;
-
-    .icon {
-        font-size: ${({ theme }) => theme.font.size.xxxl};
-        color: ${({ theme }) => theme.palette.secondary};
-    }
-
-    &:hover {
-        background-color: transparent;
-        .icon {
-            color: ${({ theme }) => theme.palette.dominant};
         }
     }
 `;

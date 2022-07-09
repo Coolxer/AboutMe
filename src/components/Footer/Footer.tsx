@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
     faAt,
     faFile,
+    faFilePdf,
     faLink,
     faLocation,
 } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as Styled from 'components/Footer/Footer.style';
 import Logo from 'components/Logo/Logo';
-import Button from 'components/Button/Button';
 
 const Footer = () => (
     <Styled.Wrapper>
@@ -30,6 +30,9 @@ const Footer = () => (
                 </a>
                 <a href="lukasz.milos@int.pl" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faAt} />
+                </a>
+                <a href="#cv.pdf" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon icon={faFilePdf} />
                 </a>
             </div>
         </div>
@@ -56,13 +59,14 @@ const Footer = () => (
             </div>
             <div className="address">
                 <div className="header">
-                    <span>ADDRESS</span>
                     <FontAwesomeIcon icon={faLocation} />
+                    <span>ADDRESS</span>
                 </div>
-                <span>Borowa, Polska</span>
-                <span>(Prefer remote)</span>
-                <span>lukasz.milos@int.pl</span>
-                <Button className="cv-btn" text="Get CV" icon={faFile} />
+                <ul>
+                    <li>Borowa, Polska</li>
+                    <li>(Prefer remote)</li>
+                    <li>lukasz.milos@int.pl</li>
+                </ul>
             </div>
         </div>
         <div className="copyright">

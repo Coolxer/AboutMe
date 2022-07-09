@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
     position: fixed;
     top: 0;
 
-    ${mixins.flexRow};
+    ${mixins.flex};
     justify-content: space-between;
 
     width: 100%;

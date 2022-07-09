@@ -17,12 +17,11 @@ export const Wrapper = styled.section`
 
     a {
         color: ${({ theme }) => theme.palette.dominant};
-        opacity: 0.7;
 
-        transition: opacity 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out;
 
         &:hover {
-            opacity: 1;
+            color: ${({ theme }) => theme.palette.accent};
         }
     }
 
@@ -43,7 +42,6 @@ export const Wrapper = styled.section`
 
             a {
                 font-size: ${({ theme }) => theme.font.size.l};
-                color: ${({ theme }) => theme.palette.dominant};
             }
         }
     }
@@ -68,14 +66,27 @@ export const Wrapper = styled.section`
                 font-size: ${({ theme }) => theme.font.size.s};
                 color: ${({ theme }) => theme.palette.accent};
 
+                margin-bottom: 5px;
+
                 span {
-                    padding-right: 10px;
+                    padding: 10px;
                 }
             }
         }
 
-        .address .cv-btn {
-            margin-top: 10px;
+        .links {
+            align-items: flex-start;
+            margin-left: 30px;
+        }
+
+        .address {
+            align-items: flex-end;
+            margin-right: 30px;
+
+            .cv-btn {
+                width: 140px;
+                margin-top: 10px;
+            }
         }
     }
 

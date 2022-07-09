@@ -6,7 +6,7 @@ type Props = {
     isOpen: boolean;
 };
 
-const MobileMenu = ({ isOpen }: Props) => {
+const Menu = ({ isOpen }: Props) => {
     return (
         <Styled.Menu isOpen={isOpen}>
             <ul>
@@ -20,4 +20,4 @@ const MobileMenu = ({ isOpen }: Props) => {
     );
 };
 
-export default MobileMenu;
+export default Menu;
