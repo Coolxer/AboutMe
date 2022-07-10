@@ -16,7 +16,6 @@ const Logo = ({ grayed, colorized, big }: Props) => (
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="Logo"
-            layout="responsive"
         />
     </Styled.Wrapper>
 );

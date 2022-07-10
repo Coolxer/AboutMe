@@ -1,4 +1,5 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPersonWalking, faUser } from '@fortawesome/free-solid-svg-icons';
 import * as Styled from 'components/About/About.style';
 import SectionHeader from 'components/SectionHeader/SectionHeader';
 
@@ -17,6 +18,7 @@ const About = () => (
                 disadvantages of various solutions and certify that I like and
                 can learn quickly.
             </p>
+            <FontAwesomeIcon className="person-icon" icon={faPersonWalking} />
         </article>
         <div className="quote">
             Knowledge and versality, no memory an specialization - this is my

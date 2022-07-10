@@ -18,7 +18,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
     transition: transform 0.5s ease-in-out;
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tablet} {
         position: static;
 
         ${mixins.flex};
@@ -33,10 +33,14 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     ul {
         width: 100%;
 
-        @media ${({ theme }) => theme.device.laptop} {
+        @media ${({ theme }) => theme.device.tablet} {
             ${mixins.flexRow};
 
-            width: 50%;
+            width: 75%;
+        }
+
+        @media ${({ theme }) => theme.device.laptop} {
+            width: 55%;
         }
 
         li {
@@ -71,9 +75,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                     cursor: pointer;
                 }
 
-                @media ${({ theme }) => theme.device.laptop} {
-                    font-size: ${({ theme }) => theme.font.size.m};
-
+                @media ${({ theme }) => theme.device.tablet} {
                     border: none;
                     background-color: ${({ theme }) => theme.palette.accent};
                     box-shadow: none;
@@ -82,6 +84,12 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                         background-color: ${({ theme }) =>
         theme.palette.accent};
                     }
+
+                    font-size: ${({ theme }) => theme.font.size.s};
+                }
+
+                @media ${({ theme }) => theme.device.laptop} {
+                    font-size: ${({ theme }) => theme.font.size.m};
                 }
             }
         }

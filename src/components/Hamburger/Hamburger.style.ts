@@ -10,7 +10,7 @@ export const Hamburger = styled.button`
     background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.secondary};
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tablet} {
         display: none;
     }
 `;

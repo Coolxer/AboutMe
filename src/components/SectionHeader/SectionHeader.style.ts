@@ -18,6 +18,13 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.palette.dominant};
     box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
 
+    @media ${({ theme }) => theme.device.laptop} {
+        width: 40%;
+        height: 90px;
+
+        font-size: ${({ theme }) => theme.font.size.xxl};
+    }
+
     .icon {
         position: absolute;
         right: 0;
@@ -25,5 +32,9 @@ export const Wrapper = styled.div`
         padding-right: 10px;
 
         font-size: ${({ theme }) => theme.font.size.xl};
+
+        @media ${({ theme }) => theme.device.laptop} {
+            font-size: ${({ theme }) => theme.font.size.xxl};
+        }
     }
 `;

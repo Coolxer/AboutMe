@@ -7,22 +7,21 @@ export const Wrapper = styled.header`
     height: 100vh;
 
     .left-side {
-        position: relative;
-        top: 80px;
-
-        ${mixins.flex};
+        ${mixins.flexCol};
         flex: 1;
         height: 100%;
 
-        @media ${({ theme }) => theme.device.laptop} {
-            justify-content: flex-end;
+        @media ${({ theme }) => theme.device.tablet} {
+            align-items: flex-end;
+
+            margin-top: 80px;
         }
 
         .info-wrapper {
             ${mixins.flexCol};
             height: 100%;
 
-            @media ${({ theme }) => theme.device.laptop} {
+            @media ${({ theme }) => theme.device.tablet} {
                 height: auto;
             }
         }
@@ -31,23 +30,30 @@ export const Wrapper = styled.header`
     .right-side {
         display: none;
 
-        @media ${({ theme }) => theme.device.laptop} {
-            position: relative;
-            top: 80px;
-
+        @media ${({ theme }) => theme.device.tablet} {
             ${mixins.flex};
             flex: 1;
             height: 100%;
+        }
 
-            .image-wrapper {
+        .image-wrapper {
+            width: 90%;
+
+            @media ${({ theme }) => theme.device.laptop} {
                 width: 55%;
             }
+
+            margin-top: 80px;
         }
     }
 `;
 
 export const HelloHeader = styled.h1`
     font-size: ${({ theme }) => theme.font.size.xl};
+
+    @media ${({ theme }) => theme.device.tablet} {
+        font-size: ${({ theme }) => theme.font.size.xxl};
+    }
 
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.xxxl};
@@ -63,6 +69,10 @@ export const NameHeader = styled.h1`
     background-color: ${({ theme }) => theme.palette.secondary};
     color: ${({ theme }) => theme.palette.accent};
 
+    @media ${({ theme }) => theme.device.tablet} {
+        font-size: ${({ theme }) => theme.font.size.xxl};
+    }
+
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.xxxl};
     }
@@ -71,6 +81,10 @@ export const NameHeader = styled.h1`
 export const ProfessionHeader = styled.h2`
     font-size: ${({ theme }) => theme.font.size.m};
 
+    @media ${({ theme }) => theme.device.tablet} {
+        font-size: ${({ theme }) => theme.font.size.l};
+    }
+
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.xl};
     }
@@ -78,6 +92,10 @@ export const ProfessionHeader = styled.h2`
 
 export const HobbyHeader = styled.h3`
     font-size: ${({ theme }) => theme.font.size.s};
+
+    @media ${({ theme }) => theme.device.tablet} {
+        font-size: ${({ theme }) => theme.font.size.m};
+    }
 
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.l};
@@ -95,6 +113,10 @@ export const LocationHeader = styled.h4`
         color: ${({ theme }) => theme.palette.accent};
     }
 
+    @media ${({ theme }) => theme.device.tablet} {
+        font-size: ${({ theme }) => theme.font.size.s};
+    }
+
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.m};
     }
@@ -106,7 +128,7 @@ export const Image = styled.div`
 
     width: 240px;
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tablet} {
         position: static;
         padding-top: 20px;
     }
