@@ -6,46 +6,72 @@ export const Wrapper = styled.header`
     width: 100%;
     height: 100vh;
 
+    @media ${({ theme }) => theme.device.desktop} {
+        width: 75%;
+
+        margin: 0 auto;
+    }
+
     .left-side {
-        ${mixins.flexCol};
         flex: 1;
-        height: 100%;
+        z-index: 2;
 
         @media ${({ theme }) => theme.device.tablet} {
-            align-items: flex-end;
+            position: relative;
 
+            align-items: flex-end;
             margin-top: 80px;
         }
 
         .info-wrapper {
-            position: relative;
-            top: 40px;
-
             ${mixins.flexCol};
-            height: 100%;
 
             @media ${({ theme }) => theme.device.tablet} {
                 height: auto;
             }
+        }
     }
 
     .right-side {
         display: none;
+        flex: 1;
 
         @media ${({ theme }) => theme.device.tablet} {
+            position: absolute;
+
             ${mixins.flex};
-            flex: 1;
+
+            width: 100%;
             height: 100%;
+
+            z-index: 1;
+        }
+
+        @media ${({ theme }) => theme.device.laptop} {
+            position: static;
         }
 
         .image-wrapper {
-            width: 90%;
+            transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
-            @media ${({ theme }) => theme.device.laptop} {
-                width: 55%;
+            @media ${({ theme }) => theme.device.tablet} {
+                width: 50%;
+                max-width: 50%;
+                margin-top: 80px;
+
+                opacity: 0.2;
             }
 
-            margin-top: 80px;
+            @media ${({ theme }) => theme.device.laptop} {
+                width: 85%;
+                max-width: 480px;
+
+                opacity: 1;
+            }
+
+            @media ${({ theme }) => theme.device.desktop} {
+                max-width: 580px;
+            }
         }
     }
 `;
