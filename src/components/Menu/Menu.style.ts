@@ -24,8 +24,6 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
         ${mixins.flex};
         align-items: flex-end;
 
-        height: 100%;
-
         transform: none;
         transition: none;
     }
@@ -35,11 +33,9 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
 
         @media ${({ theme }) => theme.device.tablet} {
             ${mixins.flexRow};
-
-            width: 75%;
         }
 
-        @media ${({ theme }) => theme.device.laptop} {
+        @media ${({ theme }) => theme.device.desktop} {
             width: 55%;
         }
 
@@ -67,29 +63,31 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                 transition: background-color 0.2s ease-in-out,
                     color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
-                &:hover {
-                    background-color: ${({ theme }) => theme.palette.dominant};
-                    color: ${({ theme }) => theme.palette.secondary};
-                    box-shadow: 0 0 10px 0
-                        ${({ theme }) => theme.palette.accent};
-                    cursor: pointer;
-                }
-
                 @media ${({ theme }) => theme.device.tablet} {
                     border: none;
-                    background-color: ${({ theme }) => theme.palette.accent};
+                    background-color: transparent;
                     box-shadow: none;
-
-                    &:hover {
-                        background-color: ${({ theme }) =>
-        theme.palette.accent};
-                    }
 
                     font-size: ${({ theme }) => theme.font.size.s};
                 }
 
                 @media ${({ theme }) => theme.device.laptop} {
                     font-size: ${({ theme }) => theme.font.size.m};
+                }
+
+                &:hover {
+                    background-color: ${({ theme }) => theme.palette.dominant};
+                    color: ${({ theme }) => theme.palette.secondary};
+                    box-shadow: 0 0 10px 0
+                        ${({ theme }) => theme.palette.accent};
+                    cursor: pointer;
+
+                    @media ${({ theme }) => theme.device.tablet} {
+                        background-color: ${({ theme }) =>
+        theme.palette.accent};
+
+                        transition: none;
+                    }
                 }
             }
         }

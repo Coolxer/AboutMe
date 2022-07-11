@@ -18,13 +18,15 @@ export const Wrapper = styled.header`
         }
 
         .info-wrapper {
+            position: relative;
+            top: 40px;
+
             ${mixins.flexCol};
             height: 100%;
 
             @media ${({ theme }) => theme.device.tablet} {
                 height: auto;
             }
-        }
     }
 
     .right-side {
@@ -131,5 +133,9 @@ export const Image = styled.div`
     @media ${({ theme }) => theme.device.tablet} {
         position: static;
         padding-top: 20px;
+    }
+
+    @media only screen and (max-height: 500px) {
+        display: none;
     }
 `;
