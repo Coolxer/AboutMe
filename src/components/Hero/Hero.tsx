@@ -5,40 +5,46 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import * as Styled from 'components/Hero/Hero.style';
 import HeroRectangles from 'assets/images/hero_rectangles.svg';
 
-import MeMasked from 'assets/images/me2.svg';
+import MeMasked from 'assets/images/me_masked.png';
 
 const Hero = () => {
     return (
         <Styled.Wrapper>
-            <div className="left-side">
-                <div className="info-wrapper">
-                    <Styled.HelloHeader>Hello, I am</Styled.HelloHeader>
-                    <Styled.NameHeader>Łukasz Miłoś</Styled.NameHeader>
-                    <Styled.ProfessionHeader>
-                        SOFTWARE DEVELOPER
-                    </Styled.ProfessionHeader>
-                    <Styled.HobbyHeader>
-                        IT & TECHNOLOGY PASSIONATE
-                    </Styled.HobbyHeader>
-                    <Styled.LocationHeader>
-                        <FontAwesomeIcon
-                            className="icon"
-                            icon={faLocationDot}
-                        />
-                        <span>Borowa, Polska</span>
-                    </Styled.LocationHeader>
-                    <Styled.Image>
+            <div className="box">
+                <div className="left-side">
+                    <div className="info-wrapper">
+                        <Styled.HelloHeader>Hello, I am</Styled.HelloHeader>
+                        <Styled.NameHeader>Łukasz Miłoś</Styled.NameHeader>
+                        <Styled.ProfessionHeader>
+                            SOFTWARE DEVELOPER
+                        </Styled.ProfessionHeader>
+                        <Styled.HobbyHeader>
+                            IT & TECHNOLOGY PASSIONATE
+                        </Styled.HobbyHeader>
+                        <Styled.LocationHeader>
+                            <FontAwesomeIcon
+                                className="icon"
+                                icon={faLocationDot}
+                            />
+                            <span>Borowa, Polska</span>
+                        </Styled.LocationHeader>
+                        <Styled.Image>
+                            <Image
+                                src={HeroRectangles}
+                                alt="rectangles"
+                                layout="responsive"
+                            />
+                        </Styled.Image>
+                    </div>
+                </div>
+                <div className="right-side">
+                    <div className="image-wrapper">
                         <Image
-                            src={HeroRectangles}
-                            alt="rectangles"
+                            src={MeMasked}
+                            alt="me-masked"
                             layout="responsive"
                         />
-                    </Styled.Image>
-                </div>
-            </div>
-            <div className="right-side">
-                <div className="image-wrapper">
-                    <Image src={MeMasked} alt="me-masked" layout="responsive" />
+                    </div>
                 </div>
             </div>
         </Styled.Wrapper>
