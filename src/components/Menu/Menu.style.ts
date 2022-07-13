@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Menu = styled.nav<{ isOpen: boolean }>`
+    ${mixins.flexCol};
+    justify-content: space-between;
+
     position: fixed;
     left: 0;
     top: 80px;
-
-    ${mixins.flexCol};
-    justify-content: space-between;
 
     width: 100%;
     height: calc(100% - 80px);
@@ -19,10 +19,10 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     transition: transform 0.5s ease-in-out;
 
     @media ${({ theme }) => theme.device.tablet} {
-        position: static;
-
         ${mixins.flex};
         align-items: flex-end;
+
+        position: static;
 
         transform: none;
         transition: none;

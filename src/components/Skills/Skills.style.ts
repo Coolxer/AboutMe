@@ -3,36 +3,135 @@ import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
     width: 100%;
+    margin-top: 50px;
 
     background-color: ${({ theme }) => theme.palette.dominant};
 
-    .skills-row {
+    margin-top: 50px;
+
+    @media ${({ theme }) => theme.device.tablet} {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    @media ${({ theme }) => theme.device.laptop} {
         ${mixins.flex};
-        justify-content: space-around;
+    }
 
-        width: 100%;
-        padding: 10px;
-
-        .skill-col {
-            ${mixins.flex};
-            width: 100%;
-
-            &:nth-child(2) {
-                border-left: 2px solid ${({ theme }) => theme.palette.secondary};
-                border-right: 2px solid
-                    ${({ theme }) => theme.palette.secondary};
-            }
-
-            .skill-item {
-                font-size: ${({ theme }) => theme.font.size.xxl};
-                padding: 10px;
-            }
+    .mobile-header {
+        @media ${({ theme }) => theme.device.laptop} {
+            display: none;
         }
     }
 
-    hr {
-        margin: 0 30px;
+    .skill-box {
+        flex: 1;
+        order: 2;
 
-        color: ${({ theme }) => theme.palette.secondary};
+        .skills-row {
+            ${mixins.flex};
+            justify-content: space-around;
+
+            width: 100%;
+            padding: 10px;
+
+            .skill-col {
+                ${mixins.flex};
+                width: 100%;
+
+                &:nth-child(2) {
+                    border-left: 2px solid
+                        ${({ theme }) => theme.palette.secondary};
+                    border-right: 2px solid
+                        ${({ theme }) => theme.palette.secondary};
+                }
+
+                .skill-item {
+                    font-size: ${({ theme }) => theme.font.size.xxl};
+                    padding: 10px;
+                }
+            }
+        }
+
+        hr {
+            margin: 0 30px;
+
+            color: ${({ theme }) => theme.palette.secondary};
+        }
+    }
+
+    .description {
+        display: none;
+        position: relative;
+        order: 1;
+
+        @media ${({ theme }) => theme.device.laptop} {
+            ${mixins.flexCol};
+            width: 100%;
+            flex: 1;
+        }
+
+        @media ${({ theme }) => theme.device.desktop} {
+            margin-right: 50px;
+        }
+
+        .desktop-header {
+            display: none;
+
+            @media ${({ theme }) => theme.device.laptop} {
+                display: flex;
+            }
+        }
+
+        article {
+            width: 100%;
+            padding: 10px;
+
+            @media ${({ theme }) => theme.device.laptop} {
+                flex: 1;
+            }
+
+            @media ${({ theme }) => theme.device.desktop} {
+                justify-content: flex-start;
+            }
+
+            p {
+                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-size: ${({ theme }) => theme.font.size.s};
+                text-align: justify;
+
+                @media ${({ theme }) => theme.device.laptop} {
+                    font-size: ${({ theme }) => theme.font.size.m};
+                }
+
+                @media ${({ theme }) => theme.device.tv} {
+                    font-size: ${({ theme }) => theme.font.size.l};
+                }
+            }
+        }
+
+        .graduate-icon-wrapper {
+            display: none;
+            ${mixins.flex};
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            color: ${({ theme }) => theme.palette.accent};
+            opacity: 0.5;
+
+            .graduate-icon {
+                font-size: 24rem;
+
+                @media ${({ theme }) => theme.device.desktop} {
+                    font-size: 25rem;
+                }
+            }
+        }
     }
 `;

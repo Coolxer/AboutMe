@@ -2,13 +2,16 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
+    margin-top: 50px;
+
     @media ${({ theme }) => theme.device.tablet} {
         width: 80%;
         margin: 0 auto;
+        margin-top: 50px;
     }
 
     @media ${({ theme }) => theme.device.desktop} {
-        ${mixins.flexRow};
+        display: flex;
     }
 
     .description-wrapper {
@@ -16,24 +19,28 @@ export const Wrapper = styled.section`
         flex: 1;
 
         @media ${({ theme }) => theme.device.desktop} {
-            flex: 1;
+            position: relative;
             order: 3;
 
-            position: relative;
+            justify-content: flex-start;
         }
 
         .description {
-            ${mixins.flex};
-            width: 100%;
+            @media ${({ theme }) => theme.device.laptop} {
+                ${mixins.flex};
+                width: 100%;
+            }
 
             article {
-                position: relative;
-
                 width: 100%;
                 padding: 10px;
 
                 @media ${({ theme }) => theme.device.laptop} {
                     flex: 1;
+                }
+
+                @media ${({ theme }) => theme.device.desktop} {
+                    justify-content: flex-start;
                 }
 
                 p {
@@ -45,13 +52,13 @@ export const Wrapper = styled.section`
                         font-size: ${({ theme }) => theme.font.size.m};
                     }
 
-                    @media ${({ theme }) => theme.device.desktop} {
+                    @media ${({ theme }) => theme.device.tv} {
                         font-size: ${({ theme }) => theme.font.size.l};
                     }
                 }
             }
 
-            .icon-wrapper {
+            .person-icon-wrapper {
                 display: none;
 
                 position: absolute;
@@ -65,19 +72,19 @@ export const Wrapper = styled.section`
                 opacity: 0.5;
 
                 @media ${({ theme }) => theme.device.laptop} {
-                    position: static;
                     ${mixins.flex};
+                    position: static;
                     width: 50%;
                 }
 
                 @media ${({ theme }) => theme.device.desktop} {
-                    position: absolute;
                     ${mixins.flex};
+                    position: absolute;
                     width: 100%;
                 }
 
                 .person-icon {
-                    font-size: 16rem;
+                    font-size: 24rem;
 
                     @media ${({ theme }) => theme.device.desktop} {
                         font-size: 25rem;
@@ -88,6 +95,7 @@ export const Wrapper = styled.section`
     }
 
     .quote {
+        width: 100%;
         margin-top: 10px;
         padding: 5px;
 
@@ -98,18 +106,18 @@ export const Wrapper = styled.section`
         background-color: ${({ theme }) => theme.palette.secondary};
         color: ${({ theme }) => theme.palette.accent};
 
-        @media ${({ theme }) => theme.device.laptop} {
+        @media ${({ theme }) => theme.device.tv} {
             font-size: ${({ theme }) => theme.font.size.l};
         }
     }
 
     .roles {
-        position: relative;
-        overflow: hidden;
-
         ${mixins.flexRow};
         flex-wrap: wrap;
         align-content: flex-start;
+
+        position: relative;
+        overflow: hidden;
 
         width: 100%;
         margin-top: 30px;
@@ -117,6 +125,10 @@ export const Wrapper = styled.section`
         @media ${({ theme }) => theme.device.desktop} {
             flex: 1;
             order: 1;
+            justify-content: flex-start;
+
+            margin-top: 0;
+            margin-right: 50px;
         }
 
         .profession {
@@ -132,15 +144,24 @@ export const Wrapper = styled.section`
             background-color: ${({ theme }) => theme.palette.secondary};
             color: ${({ theme }) => theme.palette.dominant};
 
+            opacity: 0.75;
+
             box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
             z-index: 10;
 
             @media ${({ theme }) => theme.device.laptop} {
                 font-size: ${({ theme }) => theme.font.size.m};
+                margin-bottom: 1vw;
             }
 
             @media ${({ theme }) => theme.device.desktop} {
-                width: 80%;
+                width: 100%;
+                //margin-bottom: 20px;
+                //margin-bottom: 13.2px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -152,23 +173,47 @@ export const Wrapper = styled.section`
                 display: none;
             }
         }
+
+        .face-image-wrapper-small {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: auto;
+
+            opacity: 0.5;
+            z-index: 0;
+
+            @media ${({ theme }) => theme.device.tablet} {
+                top: -80px;
+            }
+
+            @media ${({ theme }) => theme.device.laptop} {
+                top: -200px;
+            }
+
+            @media ${({ theme }) => theme.device.desktop} {
+                top: 0;
+            }
+
+            @media ${({ theme }) => theme.device.tv} {
+                display: none;
+            }
+        }
     }
 
-    .face {
-        //position: absolute;
-        left: 0;
-        top: 0;
+    .face-image-wrapper-big {
+        display: none;
 
-        width: 100%;
-        height: auto;
+        position: static;
+        flex: 1;
+        order: 2;
 
         opacity: 0.5;
-        z-index: 0;
 
-        @media ${({ theme }) => theme.device.desktop} {
-            position: static;
-            flex: 1;
-            order: 2;
+        @media ${({ theme }) => theme.device.tv} {
+            display: block;
         }
     }
 `;

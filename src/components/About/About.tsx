@@ -24,7 +24,7 @@ const About = () => (
                         and certify that I like and can learn quickly.
                     </p>
                 </article>
-                <div className="icon-wrapper">
+                <div className="person-icon-wrapper">
                     <FontAwesomeIcon
                         className="person-icon"
                         icon={faPersonWalking}
@@ -44,15 +44,18 @@ const About = () => (
             <div className="profession">PROGRAMMER</div>
             <div className="empty" />
             <div className="empty" />
-            <div className="profession">IT STUDENT</div>
+            <div className="profession">IT ENGINEER</div>
             <div className="profession">PROBLEM SOLVER</div>
             <div className="empty" />
             <div className="empty" />
             <div className="profession">TECHNOLOGY PASSIONATE</div>
             <div className="profession">HELPER</div>
             <div className="empty" />
+            <div className="face-image-wrapper-small">
+                <Image src={MyFace} alt="my-face" layout="responsive" />
+            </div>
         </div>
-        <div className="face">
+        <div className="face-image-wrapper-big">
             <Image src={MyFace} alt="my-face" layout="responsive" />
         </div>
     </Styled.Wrapper>

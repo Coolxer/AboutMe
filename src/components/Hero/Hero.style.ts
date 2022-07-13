@@ -50,9 +50,8 @@ export const Wrapper = styled.header`
             z-index: 1;
 
             @media ${({ theme }) => theme.device.tablet} {
-                position: absolute;
-
                 ${mixins.flex};
+                position: absolute;
 
                 width: 100%;
                 height: 100%;

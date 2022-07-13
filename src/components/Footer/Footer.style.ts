@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
-    position: relative;
     ${mixins.flexCol};
+    position: relative;
 
     width: 100%;
     height: 270px;
@@ -26,10 +26,10 @@ export const Wrapper = styled.section`
     }
 
     .icons {
-        position: absolute;
-
         ${mixins.flex};
         justify-content: space-between;
+
+        position: absolute;
 
         width: 95%;
         top: 10px;
@@ -91,10 +91,10 @@ export const Wrapper = styled.section`
     }
 
     .copyright {
+        ${mixins.flex};
+
         position: absolute;
         bottom: 0;
-
-        ${mixins.flex};
 
         width: 100%;
         height: 40px;

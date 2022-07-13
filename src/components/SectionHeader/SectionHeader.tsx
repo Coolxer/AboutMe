@@ -5,10 +5,11 @@ import * as Styled from 'components/SectionHeader/SectionHeader.style';
 type Props = {
     text: string;
     icon: IconDefinition;
+    className?: string;
 };
 
-const SectionHeader = ({ text, icon }: Props) => (
-    <Styled.Wrapper>
+const SectionHeader = ({ text, icon, className }: Props) => (
+    <Styled.Wrapper className={className}>
         <span>{text.toUpperCase()}</span>
         <FontAwesomeIcon icon={icon} className="icon" />
     </Styled.Wrapper>
