@@ -3,18 +3,18 @@ import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.button<{
     disabled?: boolean;
-    big?: boolean;
 }>`
-    ${mixins.flexRow};
-    justify-content: space-between;
+    position: relative;
+
+    width: 90%;
+    margin: 10px;
     padding: 10px;
     
     border: 3px solid ${({ theme }) => theme.palette.accent}};
     border-radius: 50px;
 
     font-family: ${({ theme }) => theme.font.family.roboto};
-    font-size: ${({ theme, big }) =>
-        big ? theme.font.size.l : theme.font.size.xs};
+    font-size: ${({ theme }) => theme.font.size.s};
 
     background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.dominant};
@@ -22,13 +22,11 @@ export const Wrapper = styled.button<{
     box-shadow: ${({ theme }) => '0px 0px 20px 0px ' + theme.palette.accent};
     
     transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
-    
-    .icon {
-        font-size: ${({ theme, big }) =>
-        big ? theme.font.size.m : theme.font.size.s};
-        margin-left: 10px;
+
+    @media ${({ theme }) => theme.device.tablet} {
+        //font-size: ${({ theme }) => theme.font.size.m};
     }
-    
+
     &:hover {
         background-color: ${({ theme }) => theme.palette.dominant};
         border-color: ${({ theme }) => theme.palette.accent};
@@ -50,5 +48,19 @@ export const Wrapper = styled.button<{
        
         box-shadow: none;
         opacity: 50%;
+    }
+
+    span {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .icon {
+        position: absolute;
+        right: 10px;
+
+        @media ${({ theme }) => theme.device.laptop} {
+            font-size: ${({ theme }) => theme.font.size.m};
+        }
     }
 `;

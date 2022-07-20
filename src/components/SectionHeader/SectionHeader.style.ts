@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     @media ${({ theme }) => theme.device.laptop} {
         height: 90px;
 
-        font-size: ${({ theme }) => theme.font.size.xxl};
+        font-size: ${({ theme }) => theme.font.size.xl};
     }
 
     @media ${({ theme }) => theme.device.desktop} {
@@ -36,7 +36,7 @@ export const Wrapper = styled.div`
         font-size: ${({ theme }) => theme.font.size.xl};
 
         @media ${({ theme }) => theme.device.laptop} {
-            font-size: ${({ theme }) => theme.font.size.xxl};
+            font-size: ${({ theme }) => theme.font.size.xl};
         }
     }
 `;

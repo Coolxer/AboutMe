@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
-    ${mixins.flexCol};
     position: relative;
+    ${mixins.flexCol};
+    justify-content: center;
 
     width: 100%;
-    height: 270px;
+    height: 300px;
     margin-top: 50px;
 
     font-family: ${({ theme }) => theme.font.family.roboto};
@@ -14,6 +15,10 @@ export const Wrapper = styled.section`
     background-color: ${({ theme }) => theme.palette.secondary};
 
     box-shadow: 0 0 20px -2px ${({ theme }) => theme.palette.shadow};
+
+    @media ${({ theme }) => theme.device.tablet} {
+        flex-direction: row;
+    }
 
     a {
         color: ${({ theme }) => theme.palette.dominant};
@@ -26,22 +31,48 @@ export const Wrapper = styled.section`
     }
 
     .icons {
+        position: absolute;
+        top: 10px;
+
         ${mixins.flex};
         justify-content: space-between;
 
-        position: absolute;
-
         width: 95%;
-        top: 10px;
+
+        @media ${({ theme }) => theme.device.tablet} {
+            position: static;
+        }
+
+        @media ${({ theme }) => theme.device.laptop} {
+            width: 50%;
+        }
+
+        .logo {
+            @media ${({ theme }) => theme.device.tablet} {
+                width: 120px;
+                height: 120px;
+
+                margin-left: 10px;
+            }
+        }
 
         .socials {
             ${mixins.flex};
             justify-content: space-evenly;
-
-            width: 80%;
+            flex-wrap: wrap;
+            width: 50%;
 
             a {
                 font-size: ${({ theme }) => theme.font.size.l};
+
+                @media ${({ theme }) => theme.device.tablet} {
+                    flex: 50%;
+                    padding: 10px;
+                }
+
+                @media ${({ theme }) => theme.device.desktop} {
+                    font-size: ${({ theme }) => theme.font.size.xl};
+                }
             }
         }
     }
@@ -52,13 +83,17 @@ export const Wrapper = styled.section`
         align-items: flex-start;
 
         width: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
 
         font-family: ${({ theme }) => theme.font.family.roboto};
         color: ${({ theme }) => theme.palette.dominant};
 
-        .links,
-        .address {
+        ul {
+            list-style-type: none;
+        }
+
+        .links-wrapper,
+        .address-wrapper {
             ${mixins.flexCol};
             flex: 1;
 
@@ -68,33 +103,80 @@ export const Wrapper = styled.section`
 
                 margin-bottom: 5px;
 
-                span {
-                    padding: 10px;
+                @media ${({ theme }) => theme.device.desktop} {
+                    font-size: ${({ theme }) => theme.font.size.m};
+                }
+            }
+
+            ul li {
+                padding-bottom: 5px;
+
+                @media ${({ theme }) => theme.device.desktop} {
+                    font-size: ${({ theme }) => theme.font.size.s};
                 }
             }
         }
 
-        .links {
+        .links-wrapper {
             align-items: flex-start;
             margin-left: 30px;
+
+            @media ${({ theme }) => theme.device.laptop} {
+                align-items: center;
+            }
+
+            .header {
+                span {
+                    padding-right: 10px;
+                }
+            }
         }
 
-        .address {
+        .address-wrapper {
             align-items: flex-end;
             margin-right: 30px;
 
-            .cv-btn {
-                width: 140px;
-                margin-top: 10px;
+            @media ${({ theme }) => theme.device.laptop} {
+                align-items: center;
+            }
+
+            .header {
+                ${mixins.flex};
+
+                span {
+                    padding-left: 10px;
+                    order: 2;
+
+                    @media ${({ theme }) => theme.device.tablet} {
+                        padding-left: 0;
+                        padding-right: 10px;
+                        order: 1;
+                    }
+                }
+
+                .icon {
+                    order: 1;
+
+                    @media ${({ theme }) => theme.device.tablet} {
+                        order: 2;
+                    }
+                }
+            }
+
+            ul li {
+                text-align: right;
+
+                @media ${({ theme }) => theme.device.tablet} {
+                    text-align: left;
+                }
             }
         }
     }
 
     .copyright {
-        ${mixins.flex};
-
         position: absolute;
         bottom: 0;
+        ${mixins.flex};
 
         width: 100%;
         height: 40px;

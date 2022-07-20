@@ -4,7 +4,6 @@ import * as Styled from 'components/Button/Button.style';
 
 type Props = {
     disabled?: boolean;
-    big?: boolean;
 
     text: string;
     icon?: IconDefinition;
@@ -14,12 +13,11 @@ type Props = {
     onClick?: () => void;
 };
 
-const Button = ({ disabled, big, text, icon, className, onClick }: Props) => {
+const Button = ({ disabled, text, icon, className, onClick }: Props) => {
     return (
         <Styled.Wrapper
-            disabled={disabled}
-            big={big}
             className={className}
+            disabled={disabled}
             onClick={onClick}>
             <span>{text}</span>
             {icon && <FontAwesomeIcon className="icon" icon={icon} />}

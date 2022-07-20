@@ -26,9 +26,7 @@ const ProjectBox = ({
             <div className="header">{title.toUpperCase()}</div>
 
             <div className="description">
-                <p>
-                    <b>{shortDescription}</b>
-                </p>
+                <p className="short-description">{shortDescription}</p>
                 <br />
                 <SmoothCollapse expanded={isExpanded}>
                     <p>{longDescription}</p>

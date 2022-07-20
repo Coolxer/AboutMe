@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg588"
-   version="1.1"
-   viewBox="0 0 63.499999 42.333335"
+   width="240"
    height="160"
-   width="240">
+   viewBox="0 0 63.499999 42.333335"
+   version="1.1"
+   id="svg588">
   <defs
      id="defs582" />
   <metadata
@@ -25,26 +25,18 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-254.66665)"
-     id="layer2" />
-  <g
-     transform="translate(0,-254.66665)"
-     id="layer1">
-    <g
-       transform="translate(-13.494296,242.0621)"
-       id="g616">
-      <path
-         style="display:inline;fill:#292f36;stroke:none;stroke-width:0.26467818;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 13.494296,23.187881 h 15.875 v 31.75 h -15.875 v -31.75"
-         id="path1159" />
-      <path
-         style="display:inline;fill:#292f36;stroke:none;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 37.306796,12.604551 h 15.875 v 31.75 h -15.875 v -31.75"
-         id="path1159-6" />
-      <path
-         style="display:inline;fill:#292f36;stroke:none;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 61.119286,23.187881 h 15.87501 v 31.75 h -15.87501 v -31.75"
-         id="path1159-7" />
-    </g>
-  </g>
+     id="layer2"
+     transform="translate(0,-254.66665)" />
+  <path
+     id="path1159"
+     d="m 0,10.583331 h 15.875 v 31.75 H 0 v -31.75"
+     style="display:inline;fill:#ebf2fa;stroke:none;stroke-width:0.26467818;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     id="path1159-6"
+     d="m 23.8125,1e-6 h 15.875 v 31.75 H 23.8125 V 1e-6"
+     style="display:inline;fill:#ebf2fa;stroke:none;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path
+     id="path1159-7"
+     d="M 47.62499,10.583331 H 63.5 v 31.75 H 47.62499 v -31.75"
+     style="display:inline;fill:#ebf2fa;stroke:none;stroke-width:0.26458338px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
 </svg>

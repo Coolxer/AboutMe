@@ -8,14 +8,15 @@ import LogoColorized from 'assets/images/logo/colorized.svg';
 type Props = {
     grayed?: boolean;
     colorized?: boolean;
-    big?: boolean;
+    className?: string;
 };
 
-const Logo = ({ grayed, colorized, big }: Props) => (
-    <Styled.Wrapper big={big}>
+const Logo = ({ grayed, colorized, className }: Props) => (
+    <Styled.Wrapper className={className}>
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="Logo"
+            layout="fill"
         />
     </Styled.Wrapper>
 );

@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div<{ big?: boolean }>`
-    width: ${({ big }) => (big ? 120 : 60)}px;
-    height: ${({ big }) => (big ? 120 : 60)}px;
+export const Wrapper = styled.div`
+    position: relative;
+
+    width: 60px;
+    height: 60px;
 
     flex: 0 0 auto;
 `;
