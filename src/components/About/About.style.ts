@@ -26,6 +26,8 @@ export const Wrapper = styled.section`
         }
 
         .description {
+            height: 100%;
+
             @media ${({ theme }) => theme.device.laptop} {
                 ${mixins.flex};
                 width: 100%;
@@ -50,10 +52,6 @@ export const Wrapper = styled.section`
 
                     @media ${({ theme }) => theme.device.laptop} {
                         font-size: ${({ theme }) => theme.font.size.m};
-                    }
-
-                    @media ${({ theme }) => theme.device.tv} {
-                        font-size: ${({ theme }) => theme.font.size.l};
                     }
                 }
             }
@@ -85,10 +83,6 @@ export const Wrapper = styled.section`
 
                 .person-icon {
                     font-size: 24rem;
-
-                    @media ${({ theme }) => theme.device.desktop} {
-                        font-size: 25rem;
-                    }
                 }
             }
         }
@@ -156,12 +150,6 @@ export const Wrapper = styled.section`
 
             @media ${({ theme }) => theme.device.desktop} {
                 width: 100%;
-                //margin-bottom: 20px;
-                //margin-bottom: 13.2px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
             }
         }
 
@@ -174,7 +162,7 @@ export const Wrapper = styled.section`
             }
         }
 
-        .face-image-wrapper-small {
+        .face-image-wrapper {
             position: absolute;
             left: 0;
             top: 0;
@@ -196,24 +184,6 @@ export const Wrapper = styled.section`
             @media ${({ theme }) => theme.device.desktop} {
                 top: 0;
             }
-
-            @media ${({ theme }) => theme.device.tv} {
-                display: none;
-            }
-        }
-    }
-
-    .face-image-wrapper-big {
-        display: none;
-
-        position: static;
-        flex: 1;
-        order: 2;
-
-        opacity: 0.5;
-
-        @media ${({ theme }) => theme.device.tv} {
-            display: block;
         }
     }
 `;
