@@ -31,21 +31,25 @@
      transform="translate(0,-280.89507)"
      id="layer1">
     <g
-       id="g820">
+       id="g17">
       <circle
          style="opacity:1;fill:none;fill-opacity:1;stroke:#23ce6b;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
          id="path864"
          cx="8.0524502"
          cy="288.94754"
          r="7.7878666" />
-      <path
-         style="fill:none;fill-opacity:1;stroke:#23ce6b;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 6.1050092,282.61687 -3.6649763,10.99494 h 3.6649763 l 1.8324924,-5.49747 1.8324882,3.66498 1.8324882,-3.66498 1.832493,5.49747"
-         id="path860" />
-      <path
-         style="fill:none;fill-opacity:1;stroke:#23ce6b;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 2.4400329,286.28186 H 13.434971"
-         id="path862" />
+      <g
+         id="g18"
+         transform="matrix(0.90997318,0,0,0.90997318,0.75951059,25.608352)">
+        <path
+           id="path860"
+           d="m 6.1050092,282.61687 -3.6649763,10.99494 h 3.6649763 l 1.8324924,-5.49747 1.8324882,3.66498 1.8324882,-3.66498 1.832493,5.49747"
+           style="fill:none;fill-opacity:1;stroke:#23ce6b;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           id="path862"
+           d="M 2.4400329,286.28186 H 13.434971"
+           style="fill:none;fill-opacity:1;stroke:#23ce6b;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
     </g>
   </g>
 </svg>

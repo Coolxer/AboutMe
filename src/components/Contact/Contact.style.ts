@@ -3,8 +3,11 @@ import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
     ${mixins.flexCol};
+    align-items: flex-start;
+    
     width: 100%;
     margin-top: 50px;
+
 
     @media ${({ theme }) => theme.device.tablet} {
         width: 80%;
@@ -28,24 +31,13 @@ export const Wrapper = styled.section`
 
         @media ${({ theme }) => theme.device.laptop} {
             ${mixins.flexCol};
-            flex: 1;
-        }
-
-        @media ${({ theme }) => theme.device.laptop} {
+            flex: 1;            
             margin-right: 50px;
         }
 
         article {
             width: 100%;
             padding: 10px;
-
-            @media ${({ theme }) => theme.device.laptop} {
-                flex: 1;
-            }
-
-            @media ${({ theme }) => theme.device.desktop} {
-                justify-content: flex-start;
-            }
 
             p {
                 font-family: ${({ theme }) => theme.font.family.roboto};
@@ -55,15 +47,10 @@ export const Wrapper = styled.section`
                 @media ${({ theme }) => theme.device.laptop} {
                     font-size: ${({ theme }) => theme.font.size.m};
                 }
-
-                @media ${({ theme }) => theme.device.tv} {
-                    font-size: ${({ theme }) => theme.font.size.l};
-                }
             }
         }
 
         .headphones-icon-wrapper {
-            display: none;
             ${mixins.flex};
 
             position: absolute;
@@ -77,11 +64,7 @@ export const Wrapper = styled.section`
             opacity: 0.5;
 
             .headphones-icon {
-                font-size: 24rem;
-
-                @media ${({ theme }) => theme.device.desktop} {
-                    font-size: 25rem;
-                }
+                font-size: 18rem;
             }
         }
     }
@@ -90,7 +73,7 @@ export const Wrapper = styled.section`
         ${mixins.flexCol}
 
         width: 100%;
-        flex: 1;
+        flex:1;
 
         .email,
         .message {
@@ -126,6 +109,7 @@ export const Wrapper = styled.section`
             textarea {
                 width: 100%;
                 margin-top: 20px;
+                padding: 10px;
 
                 font-family: ${({ theme }) => theme.font.family.roboto};
                 font-size: ${({ theme }) => theme.font.size.xs};
@@ -136,34 +120,11 @@ export const Wrapper = styled.section`
             height: 40px;
         }
 
-        .message textarea {
-            height: 150px;
-        }
-
         .message {
             margin: 30px 0;
+
+            textarea {
+            height: 150px;
+             }
         }
-
-        /*
-        .send-btn {
-            width: 90%;
-
-            @media ${({ theme }) => theme.device.tablet} {
-                width: 50%;
-            }
-
-            @media ${({ theme }) => theme.device.laptop} {
-                width: 100%;
-            }
-
-            @media ${({ theme }) => theme.device.desktop} {
-                width: 40%;
-            }
-
-            span {
-                width: 100%;
-            }
-        }
-        */
-    }
 `;

@@ -45,7 +45,7 @@ const Contact = () => {
                     <p>
                         If you have any questions or want to cooperate with me,
                         just fill out the form. I would answer as fast as it
-                        possibble.
+                        possible.
                     </p>
                     <br />
                     <p>

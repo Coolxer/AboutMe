@@ -13,12 +13,13 @@ const About = () => (
             <div className="description">
                 <article>
                     <p>
-                        My name is Łukasz Miłoś. I am a software developer, it
-                        and technology passionate.
+                        My name is Łukasz Miłoś. I am a software developer, IT
+                        and technology passionate. Now, I am not only a IT
+                        technician but also IT engineer, graduated with honors.
                     </p>
                     <br />
                     <p>
-                        I have extensive experience hobby in various
+                        I have extensive hobby experience in various
                         technologies, which gives me perfect view and product
                         mix advantages and disadvantages of various solutions
                         and certify that I like and can learn quickly.
@@ -37,15 +38,15 @@ const About = () => (
             </div>
         </div>
         <div className="roles">
-            <div className="profession">IT TECHNIC</div>
-            <div className="empty" />
-            <div className="empty" />
-            <div className="profession">MACHINE BUILDER</div>
-            <div className="profession">PROGRAMMER</div>
+            <div className="profession">IT TECHNICIAN</div>
             <div className="empty" />
             <div className="empty" />
             <div className="profession">IT ENGINEER</div>
+            <div className="profession">PROGRAMMER</div>
+            <div className="empty" />
+            <div className="empty" />
             <div className="profession">PROBLEM SOLVER</div>
+            <div className="profession">MACHINE BUILDER</div>
             <div className="empty" />
             <div className="empty" />
             <div className="profession">TECHNOLOGY PASSIONATE</div>

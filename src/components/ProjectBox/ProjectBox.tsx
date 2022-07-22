@@ -22,13 +22,15 @@ const ProjectBox = ({
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <Styled.Wrapper>
+        <Styled.Wrapper isExpanded={isExpanded}>
             <div className="header">{title.toUpperCase()}</div>
 
             <div className="description">
                 <p className="short-description">{shortDescription}</p>
                 <br />
-                <SmoothCollapse expanded={isExpanded}>
+                <SmoothCollapse
+                    expanded={isExpanded}
+                    heightTransition="0.25s 0.6s ease-in-out">
                     <p>{longDescription}</p>
                 </SmoothCollapse>
             </div>

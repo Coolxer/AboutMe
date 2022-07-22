@@ -49,8 +49,8 @@ export const Wrapper = styled.section`
 
         .logo {
             @media ${({ theme }) => theme.device.tablet} {
-                width: 120px;
-                height: 120px;
+                width: 140px;
+                height: 140px;
 
                 margin-left: 10px;
             }
@@ -142,6 +142,7 @@ export const Wrapper = styled.section`
 
             .header {
                 ${mixins.flex};
+                justify-content: flex-start;
 
                 span {
                     padding-left: 10px;

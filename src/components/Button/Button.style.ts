@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
-export const Wrapper = styled.button<{
-    disabled?: boolean;
-}>`
-    position: relative;
+export const Wrapper = styled.button`
+    ${mixins.flex}
 
     width: 90%;
     margin: 10px;
@@ -56,8 +54,6 @@ export const Wrapper = styled.button<{
     }
     
     .icon {
-        position: absolute;
-        right: 10px;
 
         @media ${({ theme }) => theme.device.laptop} {
             font-size: ${({ theme }) => theme.font.size.m};

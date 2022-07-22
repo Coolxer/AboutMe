@@ -82,7 +82,7 @@ export const Wrapper = styled.section`
                 }
 
                 .person-icon {
-                    font-size: 24rem;
+                    font-size: 18rem;
                 }
             }
         }
@@ -108,7 +108,6 @@ export const Wrapper = styled.section`
     .roles {
         ${mixins.flexRow};
         flex-wrap: wrap;
-        align-content: flex-start;
 
         position: relative;
         overflow: hidden;
@@ -119,7 +118,6 @@ export const Wrapper = styled.section`
         @media ${({ theme }) => theme.device.desktop} {
             flex: 1;
             order: 1;
-            justify-content: flex-start;
 
             margin-top: 0;
             margin-right: 50px;

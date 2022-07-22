@@ -7,8 +7,6 @@ export const Wrapper = styled.section`
 
     background-color: ${({ theme }) => theme.palette.dominant};
 
-    margin-top: 50px;
-
     @media ${({ theme }) => theme.device.tablet} {
         width: 80%;
         margin: 0 auto;
@@ -17,6 +15,7 @@ export const Wrapper = styled.section`
 
     @media ${({ theme }) => theme.device.laptop} {
         ${mixins.flex};
+        align-items: flex-start;
     }
 
     .mobile-header {
@@ -25,7 +24,7 @@ export const Wrapper = styled.section`
         }
     }
 
-    .skill-box {
+    .skills-box {
         flex: 1;
         order: 2;
 
@@ -68,6 +67,8 @@ export const Wrapper = styled.section`
 
         @media ${({ theme }) => theme.device.laptop} {
             ${mixins.flexCol};
+            align-items: space-between;
+
             width: 100%;
             flex: 1;
         }
@@ -104,10 +105,6 @@ export const Wrapper = styled.section`
                 @media ${({ theme }) => theme.device.laptop} {
                     font-size: ${({ theme }) => theme.font.size.m};
                 }
-
-                @media ${({ theme }) => theme.device.tv} {
-                    font-size: ${({ theme }) => theme.font.size.l};
-                }
             }
         }
 
@@ -126,11 +123,7 @@ export const Wrapper = styled.section`
             opacity: 0.5;
 
             .graduate-icon {
-                font-size: 24rem;
-
-                @media ${({ theme }) => theme.device.desktop} {
-                    font-size: 25rem;
-                }
+                font-size: 18rem;
             }
         }
     }

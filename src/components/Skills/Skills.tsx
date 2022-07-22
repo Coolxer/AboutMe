@@ -32,7 +32,7 @@ const Skills = () => (
             icon={faSuperpowers}
             className="mobile-header"
         />
-        <div className="skill-box">
+        <div className="skills-box">
             <div className="skills-row">
                 <div className="skill-col">
                     <FontAwesomeIcon

@@ -16,10 +16,10 @@ const Hero = () => {
                         <Styled.HelloHeader>Hello, I am</Styled.HelloHeader>
                         <Styled.NameHeader>Łukasz Miłoś</Styled.NameHeader>
                         <Styled.ProfessionHeader>
-                            SOFTWARE DEVELOPER
+                            IT ENGINEER
                         </Styled.ProfessionHeader>
                         <Styled.HobbyHeader>
-                            IT & TECHNOLOGY PASSIONATE
+                            TECHNOLOGY PASSIONATE
                         </Styled.HobbyHeader>
                         <Styled.LocationHeader>
                             <FontAwesomeIcon
