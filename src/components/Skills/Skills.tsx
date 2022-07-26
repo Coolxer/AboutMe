@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, IconProp } from '@fortawesome/fontawesome-svg-core';
 import {
     faCss3Alt,
     faGit,
@@ -29,64 +29,26 @@ const Skills = () => (
     <Styled.Wrapper>
         <SectionHeader
             text="skills"
-            icon={faSuperpowers}
+            icon={faSuperpowers as IconDefinition}
             className="mobile-header"
         />
         <div className="skills-box">
             <div className="skills-row">
                 <div className="skill-col">
                     <FontAwesomeIcon
-                        icon={faHtml5 as IconProp}
+                        icon={faHtml5 as IconDefinition}
                         className="skill-item"
                     />
-                </div>
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faCss3Alt} className="skill-item" />
-                </div>
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faJs} className="skill-item" />
-                </div>
-            </div>
-            <hr />
-            <div className="skills-row">
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faPhp} className="skill-item" />
-                </div>
-
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faSass} className="skill-item" />
-                </div>
-
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faDatabase} className="skill-item" />
-                </div>
-            </div>
-            <hr />
-            <div className="skills-row">
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faReact} className="skill-item" />
-                </div>
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faVuejs} className="skill-item" />
                 </div>
                 <div className="skill-col">
                     <FontAwesomeIcon
-                        icon={faWordpress}
+                        icon={faCss3Alt as IconDefinition}
                         className="skill-item"
                     />
-                </div>
-            </div>
-            <hr />
-            <div className="skills-row">
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faPython} className="skill-item" />
-                </div>
-                <div className="skill-col">
-                    <FontAwesomeIcon icon={faC} className="skill-item" />
                 </div>
                 <div className="skill-col">
                     <FontAwesomeIcon
-                        icon={faMicrochip}
+                        icon={faJs as IconDefinition}
                         className="skill-item"
                     />
                 </div>
@@ -94,20 +56,94 @@ const Skills = () => (
             <hr />
             <div className="skills-row">
                 <div className="skill-col">
-                    <FontAwesomeIcon icon={faGit} className="skill-item" />
+                    <FontAwesomeIcon
+                        icon={faPhp as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faSass as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faDatabase as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+            </div>
+            <hr />
+            <div className="skills-row">
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faReact as IconDefinition}
+                        className="skill-item"
+                    />
                 </div>
                 <div className="skill-col">
-                    <FontAwesomeIcon icon={faTrello} className="skill-item" />
+                    <FontAwesomeIcon
+                        icon={faVuejs as IconDefinition}
+                        className="skill-item"
+                    />
                 </div>
                 <div className="skill-col">
-                    <FontAwesomeIcon icon={faLinux} className="skill-item" />
+                    <FontAwesomeIcon
+                        icon={faWordpress as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+            </div>
+            <hr />
+            <div className="skills-row">
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faPython as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faC as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faMicrochip as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+            </div>
+            <hr />
+            <div className="skills-row">
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faGit as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faTrello as IconDefinition}
+                        className="skill-item"
+                    />
+                </div>
+                <div className="skill-col">
+                    <FontAwesomeIcon
+                        icon={faLinux as IconDefinition}
+                        className="skill-item"
+                    />
                 </div>
             </div>
         </div>
         <div className="description">
             <SectionHeader
                 text="skills"
-                icon={faSuperpowers}
+                icon={faSuperpowers as IconDefinition}
                 className="desktop-header"
             />
             <article>
@@ -132,7 +168,7 @@ const Skills = () => (
             <div className="graduate-icon-wrapper">
                 <FontAwesomeIcon
                     className="graduate-icon"
-                    icon={faUserGraduate}
+                    icon={faUserGraduate as IconDefinition}
                 />
             </div>
         </div>

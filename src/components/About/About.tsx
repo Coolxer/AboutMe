@@ -5,11 +5,12 @@ import { faPersonWalking, faUser } from '@fortawesome/free-solid-svg-icons';
 import MyFace from 'assets/images/my_face.svg';
 import * as Styled from 'components/About/About.style';
 import SectionHeader from 'components/SectionHeader/SectionHeader';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const About = () => (
     <Styled.Wrapper>
         <div className="description-wrapper">
-            <SectionHeader text="about" icon={faUser} />
+            <SectionHeader text="about" icon={faUser as IconDefinition} />
             <div className="description">
                 <article>
                     <p>
@@ -28,7 +29,7 @@ const About = () => (
                 <div className="person-icon-wrapper">
                     <FontAwesomeIcon
                         className="person-icon"
-                        icon={faPersonWalking}
+                        icon={faPersonWalking as IconDefinition}
                     />
                 </div>
             </div>

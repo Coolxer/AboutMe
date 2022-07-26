@@ -1,54 +1,43 @@
-import { useState } from 'react';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import SmoothCollapse from 'react-smooth-collapse';
 import * as Styled from 'components/ProjectBox/ProjectBox.style';
 import Button from 'components/Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 type Props = {
     title: string;
-    shortDescription: string;
-    longDescription: string;
+    subtitle: string;
+    description: string;
+    technologies?: IconDefinition[];
     githubLink: string;
 };
 
 const ProjectBox = ({
     title,
-    shortDescription,
-    longDescription,
+    subtitle,
+    description,
+    technologies,
     githubLink,
 }: Props) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-
     return (
-        <Styled.Wrapper isExpanded={isExpanded}>
+        <Styled.Wrapper>
             <div className="header">{title.toUpperCase()}</div>
-
-            <div className="description">
-                <p className="short-description">{shortDescription}</p>
-                <br />
-                <SmoothCollapse
-                    expanded={isExpanded}
-                    heightTransition="0.25s 0.6s ease-in-out">
-                    <p>{longDescription}</p>
-                </SmoothCollapse>
+            <hr />
+            <div className="technologies">
+                {technologies &&
+                    technologies.map((icon, index) => {
+                        return (
+                            <div key={index}>
+                                <FontAwesomeIcon className="tech" icon={icon} />
+                            </div>
+                        );
+                    })}
             </div>
 
-            <div className="buttons">
-                {isExpanded ? (
-                    <Button
-                        text="Show less"
-                        icon={faChevronUp}
-                        onClick={() => setIsExpanded(false)}
-                    />
-                ) : (
-                    <Button
-                        text="Show more"
-                        icon={faChevronDown}
-                        onClick={() => setIsExpanded(true)}
-                    />
-                )}
+            <div className="info">
+                <p className="subtitle">{subtitle.toUpperCase()}</p>
+                <p className="description"> {description}</p>
                 <a href={githubLink} target="_blank" rel="noreferrer">
                     <Button
                         text="Github"

@@ -1,40 +1,35 @@
 import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
-export const Wrapper = styled.div<{
-    isExpanded: boolean;
-}>`
+export const Wrapper = styled.div`
     ${mixins.flexCol};
 
     width: 90%;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 10px;
-    
-    border: 5px solid ${({ theme }) => theme.palette.secondary};
+    border-radius: 25px;
 
-    order: ${(props) => (props.isExpanded ? 0 : 1)};
+    background-color: ${({ theme }) => theme.palette.secondary};
 
-    transition: all 0.25s ease-in-out;
-    transition: order 0.25s ease-in-out, width 0.25s 0.25s  ease-in-out;
+    //box-shadow: 2px 2px 5px 5px ${({ theme }) => theme.palette.shadow};
 
-    @media ${({ theme }) => theme.device.tablet} {
-        width: ${(props) => (props.isExpanded ? 100 : 45)}%;
+    @media ${({ theme }) => theme.device.laptop} {
+        width: 45%;
     }
 
     @media ${({ theme }) => theme.device.desktop} {
-        width: ${(props) => (props.isExpanded ? 100 : 32)}%;
+        width: 32%;
     }
 
     @media ${({ theme }) => theme.device.tv} {
-        width: ${(props) => (props.isExpanded ? 100 : 24)}%;
+        width: 24%;
     }
-
 
     .header {
         ${mixins.flex};
 
         width: 100%;
-        padding: 5px;
+        padding: 10px;
 
         font-family: ${({ theme }) => theme.font.family.roboto};
         font-size: ${({ theme }) => theme.font.size.m};
@@ -47,34 +42,61 @@ export const Wrapper = styled.div<{
         }
     }
 
-    .description {
-        padding: 20px 0;
-        font-size: ${({ theme }) => theme.font.size.xs};
+    hr {
+        width: 80%;
+        height: 1px;
 
-        @media ${({ theme }) => theme.device.tablet} {
-            font-size: ${({ theme }) => theme.font.size.s};
-        }
+        background-color: red;
+        opacity: 0.5;
+    }
 
-        text-align: justify;
+    .technologies {
+        ${mixins.flexRow};
+        justify-content: space-evenly;
 
-        .short-description {
-            font-weight: bold;
-            text-align: center;
+        width: 100%;
+        padding: 5px;
+
+        background-color: ${({ theme }) => theme.palette.secondary};
+
+        .tech {
+            padding: 10px;
+
+            font-size: ${({ theme }) => theme.font.size.l};
+            color: ${({ theme }) => theme.palette.accent};
         }
     }
 
-    .buttons {
-        ${mixins.flex};
-        justify-content: space-evenly;
-        width: 100%;
+    .info {
+        ${mixins.flexCol};
 
-        @media ${({ theme }) => theme.device.tablet} {
-            flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 15px;
+
+        background-color: ${({ theme }) => theme.palette.dominant};
+
+        .subtitle {
+            margin-top: 10px;
+            padding: 10px;
+
+            font-size: ${({ theme }) => theme.font.size.s};
+            font-weight: bold;
+
+            text-align: center;
         }
 
-        @media ${({ theme }) => theme.device.desktop} {
-            flex-direction: row;
-        }}
+        .description {
+            padding: 20px 20px;
+
+            font-size: ${({ theme }) => theme.font.size.xs};
+            text-align: justify;
+
+            @media ${({ theme }) => theme.device.tablet} {
+                font-size: ${({ theme }) => theme.font.size.s};
+            }
+        }
 
         a {
             ${mixins.flex}

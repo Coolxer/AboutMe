@@ -5,7 +5,6 @@ import * as Styled from 'components/Button/Button.style';
 type Props = {
     text: string;
     icon?: IconDefinition;
-
     className?: string;
 
     onClick?: () => void;

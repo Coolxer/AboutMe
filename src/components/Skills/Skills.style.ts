@@ -28,6 +28,9 @@ export const Wrapper = styled.section`
         flex: 1;
         order: 2;
 
+        width: 90%;
+        margin: 0 auto;
+
         .skills-row {
             ${mixins.flex};
             justify-content: space-around;

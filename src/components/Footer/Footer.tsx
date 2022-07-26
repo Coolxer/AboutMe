@@ -1,3 +1,4 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
     faAt,
@@ -18,19 +19,19 @@ const Footer = () => (
                     href="https://github.com/Coolxer"
                     target="_blank"
                     rel="noreferrer">
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon icon={faGithub as IconDefinition} />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/%C5%82ukasz-mi%C5%82o%C5%9B-284a5a233/"
                     target="_blank"
                     rel="noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon icon={faLinkedin as IconDefinition} />
                 </a>
                 <a href="lukasz.milos@int.pl" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faAt} />
+                    <FontAwesomeIcon icon={faAt as IconDefinition} />
                 </a>
                 <a href="#cv.pdf" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faFilePdf} />
+                    <FontAwesomeIcon icon={faFilePdf as IconDefinition} />
                 </a>
             </div>
         </div>
@@ -39,7 +40,7 @@ const Footer = () => (
                 <div className="links">
                     <div className="header">
                         <span>LINKS</span>
-                        <FontAwesomeIcon icon={faLink} />
+                        <FontAwesomeIcon icon={faLink as IconDefinition} />
                     </div>
                     <ul>
                         <li>
@@ -60,7 +61,10 @@ const Footer = () => (
             <div className="address-wrapper">
                 <div className="address">
                     <div className="header">
-                        <FontAwesomeIcon className="icon" icon={faLocation} />
+                        <FontAwesomeIcon
+                            className="icon"
+                            icon={faLocation as IconDefinition}
+                        />
                         <span>ADDRESS</span>
                     </div>
                     <ul>

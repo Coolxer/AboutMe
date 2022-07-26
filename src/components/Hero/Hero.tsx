@@ -6,6 +6,7 @@ import * as Styled from 'components/Hero/Hero.style';
 import HeroRectangles from 'assets/images/hero_rectangles.svg';
 
 import MeMasked from 'assets/images/me_masked.png';
+import { Icon } from '@fortawesome/fontawesome-svg-core';
 
 const Hero = () => {
     return (
@@ -24,7 +25,7 @@ const Hero = () => {
                         <Styled.LocationHeader>
                             <FontAwesomeIcon
                                 className="icon"
-                                icon={faLocationDot}
+                                icon={faLocationDot as Icon}
                             />
                             <span>Borowa, Polska</span>
                         </Styled.LocationHeader>

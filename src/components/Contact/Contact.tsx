@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Styled from 'components/Contact/Contact.style';
 import SectionHeader from 'components/SectionHeader/SectionHeader';
 import Button from 'components/Button/Button';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const Contact = () => {
     const [email, setEmail] = useState<string>('');
@@ -32,13 +33,13 @@ const Contact = () => {
         <Styled.Wrapper>
             <SectionHeader
                 text="contact"
-                icon={faContactBook}
+                icon={faContactBook as IconDefinition}
                 className="mobile-header"
             />
             <div className="description">
                 <SectionHeader
                     text="Contact"
-                    icon={faContactBook}
+                    icon={faContactBook as IconDefinition}
                     className="desktop-header"
                 />
                 <article>
@@ -61,7 +62,7 @@ const Contact = () => {
                 <div className="headphones-icon-wrapper">
                     <FontAwesomeIcon
                         className="headphones-icon"
-                        icon={faHeadphones}
+                        icon={faHeadphones as IconDefinition}
                     />
                 </div>
             </div>
@@ -69,7 +70,10 @@ const Contact = () => {
                 <div className="email">
                     <label htmlFor="email">
                         <span>Email </span>
-                        <FontAwesomeIcon icon={faAt} className="icon" />
+                        <FontAwesomeIcon
+                            icon={faAt as IconDefinition}
+                            className="icon"
+                        />
                     </label>
                     <input
                         type="email"
@@ -81,7 +85,10 @@ const Contact = () => {
                 <div className="message">
                     <label htmlFor="message">
                         <span>Message </span>
-                        <FontAwesomeIcon icon={faMessage} className="icon" />
+                        <FontAwesomeIcon
+                            icon={faMessage as Icondefinition}
+                            className="icon"
+                        />
                     </label>
                     <textarea
                         placeholder="Your message"
@@ -92,7 +99,7 @@ const Contact = () => {
                 <Button
                     className="send-btn"
                     text="Send Message"
-                    icon={faPaperPlane}
+                    icon={faPaperPlane as IconDefinition}
                     onClick={handleSubmit}
                 />
             </div>
