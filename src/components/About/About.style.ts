@@ -20,9 +20,7 @@ export const Wrapper = styled.section`
 
         @media ${({ theme }) => theme.device.desktop} {
             position: relative;
-            order: 3;
-
-            justify-content: flex-start;
+            order: 2;
         }
 
         .description {
@@ -34,19 +32,9 @@ export const Wrapper = styled.section`
             }
 
             article {
-                width: 100%;
-                padding: 10px;
-
-                @media ${({ theme }) => theme.device.laptop} {
-                    flex: 1;
-                }
-
-                @media ${({ theme }) => theme.device.desktop} {
-                    justify-content: flex-start;
-                }
+                padding: 20px;
 
                 p {
-                    font-family: ${({ theme }) => theme.font.family.roboto};
                     font-size: ${({ theme }) => theme.font.size.s};
                     text-align: justify;
 
@@ -56,15 +44,12 @@ export const Wrapper = styled.section`
                 }
             }
 
-            .person-icon-wrapper {
+            .person-icon {
                 display: none;
 
                 position: absolute;
                 left: 0;
                 top: 0;
-
-                width: 100%;
-                height: 100%;
 
                 color: ${({ theme }) => theme.palette.accent};
                 opacity: 0.5;
@@ -72,17 +57,16 @@ export const Wrapper = styled.section`
                 @media ${({ theme }) => theme.device.laptop} {
                     ${mixins.flex};
                     position: static;
-                    width: 50%;
+                    width: 100%;
+                    font-size: 18rem;
                 }
 
                 @media ${({ theme }) => theme.device.desktop} {
-                    ${mixins.flex};
                     position: absolute;
-                    width: 100%;
-                }
+                    top: 25%;
 
-                .person-icon {
-                    font-size: 18rem;
+                    width: 100%;
+                    height: 50%;
                 }
             }
         }
@@ -104,84 +88,81 @@ export const Wrapper = styled.section`
             font-size: ${({ theme }) => theme.font.size.l};
         }
     }
+`;
 
-    .roles {
-        ${mixins.flexRow};
-        flex-wrap: wrap;
+export const Roles = styled.div`
+    ${mixins.flexRow};
+    flex-wrap: wrap;
 
-        position: relative;
-        overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-        width: 100%;
-        margin-top: 30px;
+    width: 100%;
+    margin-top: 30px;
+
+    @media ${({ theme }) => theme.device.desktop} {
+        flex: 1;
+        order: 1;
+
+        margin-top: 0;
+        margin-right: 50px;
+    }
+
+    .profession {
+        ${mixins.flex};
+
+        width: 50%;
+        height: 60px;
+        padding: 5px;
+
+        font-size: ${({ theme }) => theme.font.size.s};
+        text-align: center;
+
+        background-color: ${({ theme }) => theme.palette.secondary};
+        color: ${({ theme }) => theme.palette.dominant};
+
+        opacity: 0.75;
+
+        box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
+        z-index: 10;
+
+        @media ${({ theme }) => theme.device.laptop} {
+            font-size: ${({ theme }) => theme.font.size.m};
+        }
 
         @media ${({ theme }) => theme.device.desktop} {
-            flex: 1;
-            order: 1;
-
-            margin-top: 0;
-            margin-right: 50px;
-        }
-
-        .profession {
-            ${mixins.flex};
-
-            width: 50%;
-            height: 60px;
-            padding: 5px;
-
-            font-size: ${({ theme }) => theme.font.size.s};
-            text-align: center;
-
-            background-color: ${({ theme }) => theme.palette.secondary};
-            color: ${({ theme }) => theme.palette.dominant};
-
-            opacity: 0.75;
-
-            box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
-            z-index: 10;
-
-            @media ${({ theme }) => theme.device.laptop} {
-                font-size: ${({ theme }) => theme.font.size.m};
-                margin-bottom: 1vw;
-            }
-
-            @media ${({ theme }) => theme.device.desktop} {
-                width: 100%;
-            }
-        }
-
-        .empty {
-            width: 50%;
-            background: transparent;
-
-            @media ${({ theme }) => theme.device.desktop} {
-                display: none;
-            }
-        }
-
-        .face-image-wrapper {
-            position: absolute;
-            left: 0;
-            top: 0;
-
             width: 100%;
-            height: auto;
+        }
+    }
 
-            opacity: 0.5;
-            z-index: 0;
+    .empty {
+        width: 50%;
 
-            @media ${({ theme }) => theme.device.tablet} {
-                top: -80px;
-            }
+        @media ${({ theme }) => theme.device.desktop} {
+            display: none;
+        }
+    }
 
-            @media ${({ theme }) => theme.device.laptop} {
-                top: -200px;
-            }
+    .face-image {
+        position: absolute;
+        left: 0;
+        top: 0;
 
-            @media ${({ theme }) => theme.device.desktop} {
-                top: 0;
-            }
+        width: 100%;
+
+        opacity: 0.5;
+        z-index: 0;
+
+        @media ${({ theme }) => theme.device.tablet} {
+            top: -80px;
+        }
+
+        @media ${({ theme }) => theme.device.laptop} {
+            top: -200px;
+        }
+
+        @media ${({ theme }) => theme.device.desktop} {
+            top: 0;
         }
     }
 `;

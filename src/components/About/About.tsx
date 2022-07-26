@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faPersonWalking, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import MyFace from 'assets/images/my_face.svg';
-import * as Styled from 'components/About/About.style';
 import SectionHeader from 'components/SectionHeader/SectionHeader';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import * as Styled from 'components/About/About.style';
+import MyFace from 'assets/images/my_face.svg';
 
 const About = () => (
     <Styled.Wrapper>
@@ -26,19 +26,17 @@ const About = () => (
                         and certify that I like and can learn quickly.
                     </p>
                 </article>
-                <div className="person-icon-wrapper">
-                    <FontAwesomeIcon
-                        className="person-icon"
-                        icon={faPersonWalking as IconDefinition}
-                    />
-                </div>
+                <FontAwesomeIcon
+                    className="person-icon"
+                    icon={faPersonWalking as IconDefinition}
+                />
             </div>
             <div className="quote">
                 Knowledge and versality, no memory an specialization - this is
                 my domain.
             </div>
         </div>
-        <div className="roles">
+        <Styled.Roles>
             <div className="profession">IT TECHNICIAN</div>
             <div className="empty" />
             <div className="empty" />
@@ -53,10 +51,10 @@ const About = () => (
             <div className="profession">TECHNOLOGY PASSIONATE</div>
             <div className="profession">HELPER</div>
             <div className="empty" />
-            <div className="face-image-wrapper">
+            <div className="face-image">
                 <Image src={MyFace} alt="my-face" layout="responsive" />
             </div>
-        </div>
+        </Styled.Roles>
     </Styled.Wrapper>
 );
 
