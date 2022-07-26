@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.header`
+    ${mixins.flex};
+
     width: 100%;
     height: 100vh;
 
@@ -9,77 +11,64 @@ export const Wrapper = styled.header`
     color: ${({ theme }) => theme.palette.dominant};
 
     box-shadow: 2px 2px 20px 2px ${({ theme }) => theme.palette.shadow};
-
     transition: all 0.2s ease-in-out;
 
-    .box {
+    .left-side {
         ${mixins.flex};
-        width: 100%;
-        height: 100vh;
+        height: 100%;
+
+        flex: 1;
+        z-index: 2;
 
         @media ${({ theme }) => theme.device.desktop} {
-            width: 75%;
-
-            margin: 0 auto;
+            justify-content: flex-end;
+            margin-right: 75px;
         }
 
-        .left-side {
-            flex: 1;
-            z-index: 2;
+        .info-wrapper {
+            ${mixins.flexCol};
+        }
+    }
 
-            @media ${({ theme }) => theme.device.tablet} {
-                position: relative;
+    .right-side {
+        display: none;
 
-                align-items: flex-end;
-                margin-top: 80px;
-            }
+        flex: 1;
+        z-index: 1;
 
-            .info-wrapper {
-                ${mixins.flexCol};
+        @media ${({ theme }) => theme.device.tablet} {
+            ${mixins.flex};
+            position: absolute;
 
-                @media ${({ theme }) => theme.device.tablet} {
-                    height: auto;
-                }
-            }
+            width: 100%;
+            height: 100%;
         }
 
-        .right-side {
-            display: none;
-            flex: 1;
+        @media ${({ theme }) => theme.device.laptop} {
+            position: static;
+        }
 
-            z-index: 1;
+        @media ${({ theme }) => theme.device.desktop} {
+            justify-content: flex-start;
+            margin-left: 75px;
+        }
 
-            @media ${({ theme }) => theme.device.tablet} {
-                ${mixins.flex};
-                position: absolute;
+        .masked-image {
+            width: 55%;
+            max-width: 55%;
+            margin-top: 80px;
 
-                width: 100%;
-                height: 100%;
-            }
+            opacity: 0.2;
 
             @media ${({ theme }) => theme.device.laptop} {
-                position: static;
+                width: 75%;
+                max-width: 480px;
+
+                opacity: 1;
             }
 
-            .image-wrapper {
-                @media ${({ theme }) => theme.device.tablet} {
-                    width: 55%;
-                    max-width: 55%;
-                    margin-top: 80px;
-
-                    opacity: 0.2;
-                }
-
-                @media ${({ theme }) => theme.device.laptop} {
-                    width: 75%;
-                    max-width: 480px;
-
-                    opacity: 1;
-                }
-
-                @media ${({ theme }) => theme.device.desktop} {
-                    max-width: 580px;
-                }
+            @media ${({ theme }) => theme.device.desktop} {
+                max-width: 540px;
             }
         }
     }
@@ -152,12 +141,6 @@ export const LocationHeader = styled.h4`
 
     transition: font-size 0.2s ease-in-out;
 
-    .icon {
-        padding: 5px;
-        font-size: ${({ theme }) => theme.font.size.l};
-        color: ${({ theme }) => theme.palette.accent};
-    }
-
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.s};
     }
@@ -165,9 +148,15 @@ export const LocationHeader = styled.h4`
     @media ${({ theme }) => theme.device.laptop} {
         font-size: ${({ theme }) => theme.font.size.m};
     }
+
+    .location-icon {
+        padding: 5px;
+        font-size: ${({ theme }) => theme.font.size.l};
+        color: ${({ theme }) => theme.palette.accent};
+    }
 `;
 
-export const Image = styled.div`
+export const Rectangles = styled.div`
     position: absolute;
     bottom: 0;
 
