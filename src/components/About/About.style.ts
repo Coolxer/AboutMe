@@ -58,6 +58,7 @@ export const Wrapper = styled.section`
                     ${mixins.flex};
                     position: static;
                     width: 100%;
+                    height: 100%;
                     font-size: 18rem;
                 }
 

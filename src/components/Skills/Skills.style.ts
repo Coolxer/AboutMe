@@ -33,9 +33,7 @@ export const Wrapper = styled.section`
 
         .skills-row {
             ${mixins.flex};
-            justify-content: space-around;
 
-            width: 100%;
             padding: 10px;
 
             .skill-col {
@@ -47,11 +45,6 @@ export const Wrapper = styled.section`
                         ${({ theme }) => theme.palette.secondary};
                     border-right: 2px solid
                         ${({ theme }) => theme.palette.secondary};
-                }
-
-                .skill-item {
-                    font-size: ${({ theme }) => theme.font.size.xxl};
-                    padding: 10px;
                 }
             }
         }
@@ -67,6 +60,8 @@ export const Wrapper = styled.section`
         display: none;
         position: relative;
         order: 1;
+
+        height: 100%;
 
         @media ${({ theme }) => theme.device.laptop} {
             ${mixins.flexCol};
@@ -89,8 +84,7 @@ export const Wrapper = styled.section`
         }
 
         article {
-            width: 100%;
-            padding: 10px;
+            padding: 20px;
 
             @media ${({ theme }) => theme.device.laptop} {
                 flex: 1;
@@ -101,7 +95,6 @@ export const Wrapper = styled.section`
             }
 
             p {
-                font-family: ${({ theme }) => theme.font.family.roboto};
                 font-size: ${({ theme }) => theme.font.size.s};
                 text-align: justify;
 
@@ -111,21 +104,20 @@ export const Wrapper = styled.section`
             }
         }
 
-        .graduate-icon-wrapper {
+        .graduate-icon {
             display: none;
-            ${mixins.flex};
 
             position: absolute;
             left: 0;
             top: 0;
 
-            width: 100%;
-            height: 100%;
-
             color: ${({ theme }) => theme.palette.accent};
             opacity: 0.5;
 
-            .graduate-icon {
+            @media ${({ theme }) => theme.device.laptop} {
+                ${mixins.flex};
+                width: 100%;
+                height: 100%;
                 font-size: 18rem;
             }
         }
