@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import nodemailer from 'nodemailer';
 import {
     faAt,
     faContactBook,
@@ -8,6 +7,7 @@ import {
     faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import emailjs from '@emailjs/browser';
 
 import * as Styled from 'components/Contact/Contact.style';
 import SectionHeader from 'components/SectionHeader/SectionHeader';
@@ -17,20 +17,56 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 const Contact = () => {
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const [submitted, setSubmitted] = useState<boolean>(false);
 
-    const handleSubmit = (e) => {
+    const [validationMessage, setValidationMessage] = useState<string>('');
+
+    const validateFormData = (): boolean => {
+        if (email.trim().length == 0 || message.trim().length == 0) {
+            setValidationMessage('You must fill in all the fields!');
+            return false;
+        }
+
+        const reg = /\S+@\S+\.\S+/;
+
+        if (!reg.test(email)) {
+            setValidationMessage('Invalid email address given!');
+            return false;
+        }
+
+        return true;
+    };
+
+    const sendEmail = (e) => {
         e.preventDefault();
 
-        console.log('send');
+        if (!validateFormData()) return;
 
-        if (email && message) {
-            let data = { email, message };
-        }
+        console.log('validated good!');
+
+        emailjs
+            .send(
+                'service_iaypeqh',
+                'template_noyoxk6',
+                {
+                    email: email,
+                    message: message,
+                },
+                '_vTfQ1BIjjwNhaChN'
+            )
+            .then(
+                () => {
+                    setValidationMessage('Message was sent successfully!');
+                },
+                () => {
+                    setValidationMessage(
+                        'An error occurred while sending a message!'
+                    );
+                }
+            );
     };
 
     return (
-        <Styled.Wrapper>
+        <Styled.Wrapper id="contact">
             <SectionHeader
                 text="contact"
                 icon={faContactBook as IconDefinition}
@@ -59,14 +95,11 @@ const Contact = () => {
                         please write on lukasz.milos@int.pl
                     </p>
                 </article>
-                <div className="headphones-icon-wrapper">
-                    <FontAwesomeIcon
-                        className="headphones-icon"
-                        icon={faHeadphones as IconDefinition}
-                    />
+                <div className="headphones-icon">
+                    <FontAwesomeIcon icon={faHeadphones as IconDefinition} />
                 </div>
             </div>
-            <div className="contact-form">
+            <form>
                 <div className="email">
                     <label htmlFor="email">
                         <span>Email </span>
@@ -77,32 +110,48 @@ const Contact = () => {
                     </label>
                     <input
                         type="email"
-                        placeholder="Your email"
+                        name="email"
+                        placeholder="Your email to get response later"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
                 </div>
                 <div className="message">
                     <label htmlFor="message">
                         <span>Message </span>
                         <FontAwesomeIcon
-                            icon={faMessage as Icondefinition}
+                            icon={faMessage as IconDefinition}
                             className="icon"
                         />
                     </label>
                     <textarea
-                        placeholder="Your message"
+                        name="message"
+                        placeholder="Your message to me"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
+                        required
                     />
                 </div>
+                {validationMessage && (
+                    <span
+                        className={`validationMessage ${
+                            validationMessage ===
+                            'Message was sent successfully!'
+                                ? 'success'
+                                : 'error'
+                        }`}>
+                        {validationMessage}
+                    </span>
+                )}
+
                 <Button
                     className="send-btn"
                     text="Send Message"
                     icon={faPaperPlane as IconDefinition}
-                    onClick={handleSubmit}
+                    onClick={sendEmail}
                 />
-            </div>
+            </form>
         </Styled.Wrapper>
     );
 };

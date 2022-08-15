@@ -111,14 +111,15 @@ export const Wrapper = styled.section`
             left: 0;
             top: 0;
 
+            width: 100%;
+            height: 100%;
+            font-size: 18rem;
+
             color: ${({ theme }) => theme.palette.accent};
             opacity: 0.5;
 
             @media ${({ theme }) => theme.device.laptop} {
                 ${mixins.flex};
-                width: 100%;
-                height: 100%;
-                font-size: 18rem;
             }
         }
     }

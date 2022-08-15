@@ -19,12 +19,7 @@ export const Wrapper = styled.div`
 
     @media ${({ theme }) => theme.device.laptop} {
         height: 90px;
-
         font-size: ${({ theme }) => theme.font.size.xl};
-    }
-
-    @media ${({ theme }) => theme.device.desktop} {
-        width: 100%;
     }
 
     .icon {
@@ -32,11 +27,6 @@ export const Wrapper = styled.div`
         right: 0;
 
         padding-right: 10px;
-
         font-size: ${({ theme }) => theme.font.size.xl};
-
-        @media ${({ theme }) => theme.device.laptop} {
-            font-size: ${({ theme }) => theme.font.size.xl};
-        }
     }
 `;

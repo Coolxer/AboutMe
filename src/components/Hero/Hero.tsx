@@ -4,46 +4,40 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import * as Styled from 'components/Hero/Hero.style';
-import HeroRectangles from 'assets/images/hero_rectangles.svg';
+import HeroRectangles from 'assets/images/hero_rectangles.jpg';
 
 import MeMasked from 'assets/images/me_masked.png';
 
-const Hero = () => {
-    return (
-        <Styled.Wrapper>
-            <div className="left-side">
-                <div className="info-wrapper">
-                    <Styled.HelloHeader>Hello, I am</Styled.HelloHeader>
-                    <Styled.NameHeader>Łukasz Miłoś</Styled.NameHeader>
-                    <Styled.ProfessionHeader>
-                        IT ENGINEER
-                    </Styled.ProfessionHeader>
-                    <Styled.HobbyHeader>
-                        TECHNOLOGY PASSIONATE
-                    </Styled.HobbyHeader>
-                    <Styled.LocationHeader>
-                        <FontAwesomeIcon
-                            className="location-icon"
-                            icon={faLocationDot as IconDefinition}
-                        />
-                        <span>Borowa, Polska</span>
-                    </Styled.LocationHeader>
-                    <Styled.Rectangles>
-                        <Image
-                            src={HeroRectangles}
-                            alt="rectangles"
-                            layout="responsive"
-                        />
-                    </Styled.Rectangles>
-                </div>
+const Hero = () => (
+    <Styled.Wrapper id="home">
+        <div className="left-side">
+            <div className="info-wrapper">
+                <Styled.HelloHeader>Hello, I am</Styled.HelloHeader>
+                <Styled.NameHeader>Łukasz Miłoś</Styled.NameHeader>
+                <Styled.ProfessionHeader>IT ENGINEER</Styled.ProfessionHeader>
+                <Styled.HobbyHeader>TECHNOLOGY PASSIONATE</Styled.HobbyHeader>
+                <Styled.LocationHeader>
+                    <FontAwesomeIcon
+                        className="location-icon"
+                        icon={faLocationDot as IconDefinition}
+                    />
+                    <span>Borowa, Polska</span>
+                </Styled.LocationHeader>
+                <Styled.Rectangles>
+                    <Image
+                        src={HeroRectangles}
+                        alt="rectangles"
+                        layout="responsive"
+                    />
+                </Styled.Rectangles>
             </div>
-            <div className="right-side">
-                <div className="masked-image">
-                    <Image src={MeMasked} alt="me-masked" layout="responsive" />
-                </div>
+        </div>
+        <div className="right-side">
+            <div className="masked-image">
+                <Image src={MeMasked} alt="me-masked" layout="responsive" />
             </div>
-        </Styled.Wrapper>
-    );
-};
+        </div>
+    </Styled.Wrapper>
+);
 
 export default Hero;

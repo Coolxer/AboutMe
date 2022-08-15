@@ -5,16 +5,20 @@ import Hero from 'components/Hero/Hero';
 import About from 'components/About/About';
 import Skills from 'components/Skills/Skills';
 import Projects from 'components/Projects/Projects';
+import Hobby from 'components/Hobby/Hobby';
 import Contact from 'components/Contact/Contact';
 
-const Home: NextPage = () => (
-    <MainTemplate>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-    </MainTemplate>
-);
+const Home: NextPage = () => {
+    return (
+        <MainTemplate>
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+            <Hobby />
+            <Contact />
+        </MainTemplate>
+    );
+};
 
 export default Home;

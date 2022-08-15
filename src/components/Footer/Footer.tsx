@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -10,6 +11,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as Styled from 'components/Footer/Footer.style';
 import Logo from 'components/Logo/Logo';
+
+const links = ['home', 'about', 'skills', 'projects', 'hobbies', 'contact'];
+
 const Footer = () => (
     <Styled.Wrapper>
         <div className="icons">
@@ -30,7 +34,7 @@ const Footer = () => (
                 <a href="lukasz.milos@int.pl" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faAt as IconDefinition} />
                 </a>
-                <a href="#cv.pdf" target="_blank" rel="noreferrer">
+                <a href="cv.pdf" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faFilePdf as IconDefinition} />
                 </a>
             </div>
@@ -43,18 +47,19 @@ const Footer = () => (
                         <FontAwesomeIcon icon={faLink as IconDefinition} />
                     </div>
                     <ul>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#skills">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
+                        {links.map((item) => (
+                            <li key={item}>
+                                <Link
+                                    activeClass="active"
+                                    to={item}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}>
+                                    {item.toUpperCase()}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

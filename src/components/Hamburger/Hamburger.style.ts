@@ -10,6 +10,10 @@ export const Hamburger = styled.button`
     background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.secondary};
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @media ${({ theme }) => theme.device.tablet} {
         display: none;
     }

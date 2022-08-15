@@ -1,3 +1,4 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
     faBlender,
     faC,
@@ -12,10 +13,6 @@ import {
     faTableColumns,
     faTv,
 } from '@fortawesome/free-solid-svg-icons';
-
-import * as Styled from 'components/Projects/Projects.style';
-import SectionHeader from 'components/SectionHeader/SectionHeader';
-import ProjectBox from 'components/ProjectBox/ProjectBox';
 import {
     faCss3,
     faGithub,
@@ -25,11 +22,14 @@ import {
     faSass,
     faUnity,
 } from '@fortawesome/free-brands-svg-icons';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+import * as Styled from 'components/Projects/Projects.style';
+import SectionHeader from 'components/SectionHeader/SectionHeader';
+import ProjectBox from 'components/ProjectBox/ProjectBox';
 import Button from 'components/Button/Button';
 
 const Projects = () => (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="projects">
         <SectionHeader
             text="projects"
             icon={faDiagramProject as IconDefinition}
@@ -39,7 +39,12 @@ const Projects = () => (
                 title="HOP-15"
                 subtitle="Arduino-based machine control system"
                 description="This is an embedded system of very simple CNC machine for personal use of sharpening cutter tools. It uses Arduino platform. The program was written with C language from the basis. It includes not only stepper's movement but also process controlling using small screen and keyboard. "
-                technologies={[faMicrochip, faGears, faGamepad, faC]}
+                technologies={[
+                    faMicrochip as IconDefinition,
+                    faGears as IconDefinition,
+                    faGamepad as IconDefinition,
+                    faC as IconDefinition,
+                ]}
                 githubLink="https://github.com/coolxer/hop-15"
             />
 
@@ -47,7 +52,13 @@ const Projects = () => (
                 title="HOP-30 GUI"
                 subtitle="GUI for STM-32 embedded system"
                 description="Graphical user interface for new version of  embedded system based on STM-32 controller. Steering program can be found  at 'https://github.com/coolxer/HOP-30-EMBEDDED'.  This GUI is React app with Styled Components, running using Electron ecosystem."
-                technologies={[faHtml5, faCss3, faSass, faFontAwesome, faReact]}
+                technologies={[
+                    faHtml5 as IconDefinition,
+                    faCss3 as IconDefinition,
+                    faSass as IconDefinition,
+                    faFontAwesome as IconDefinition,
+                    faReact as IconDefinition,
+                ]}
                 githubLink="https://github.com/coolxer/hop-30"
             />
 
@@ -55,7 +66,11 @@ const Projects = () => (
                 title="BOMPY"
                 subtitle="Simple BOM python's application"
                 description="GUI application written with Python language and tkinter library. It was one of many study's projects.  It can be used to store BOM (Bill of materials) information of product. User can add and modify structure list of ingredients stored in indicated json file. "
-                technologies={[faFolderTree, faChartColumn, faPython]}
+                technologies={[
+                    faFolderTree as IconDefinition,
+                    faChartColumn as IconDefinition,
+                    faPython as IconDefinition,
+                ]}
                 githubLink="https://github.com/coolxer/bompy"
             />
 
@@ -63,7 +78,11 @@ const Projects = () => (
                 title="Robox"
                 subtitle="Realtime simulation of robotic arm "
                 description="Another study's project, realized as part of student's intership. The 3D model was created in Blender, but application was made with Unity engine. Program allows to steering of robotic arm few axis with sliders manually or automaticly. User can change current camera, speed of movement and test simple inverse kinematics algorithm."
-                technologies={[faRobot, faUnity, faBlender]}
+                technologies={[
+                    faRobot as IconDefinition,
+                    faUnity as IconDefinition,
+                    faBlender as IconDefinition,
+                ]}
                 githubLink="https://github.com/coolxer/robox"
             />
 
@@ -71,11 +90,16 @@ const Projects = () => (
                 title="Vis4xe"
                 subtitle="GUI application to plan small displays"
                 description="Application was created using C++ and QT ecosystem. It allows to plan strings on small embedded displays. User can add, edit and place strings on the display segments and also generate code for real display."
-                technologies={[faTv, faTableColumns]}
+                technologies={[
+                    faTv as IconDefinition,
+                    faTableColumns as IconDefinition,
+                ]}
                 githubLink="https://github.com/coolxer/vis4xe"
             />
             <a
-                href="https://github.com/coolxer/repositories"
+                href="https://github.com/Coolxer?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
                 className="more-link">
                 <Button
                     text="More and more ..."

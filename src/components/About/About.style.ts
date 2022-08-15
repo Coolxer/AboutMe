@@ -32,7 +32,9 @@ export const Wrapper = styled.section`
             }
 
             article {
+                ${mixins.flexCol};
                 padding: 20px;
+                flex: 1;
 
                 p {
                     font-size: ${({ theme }) => theme.font.size.s};
@@ -51,23 +53,24 @@ export const Wrapper = styled.section`
                 left: 0;
                 top: 0;
 
+                font-size: 28rem;
+
                 color: ${({ theme }) => theme.palette.accent};
                 opacity: 0.5;
 
                 @media ${({ theme }) => theme.device.laptop} {
                     ${mixins.flex};
                     position: static;
-                    width: 100%;
-                    height: 100%;
-                    font-size: 18rem;
+                    flex: 1;
                 }
 
                 @media ${({ theme }) => theme.device.desktop} {
                     position: absolute;
-                    top: 25%;
 
                     width: 100%;
-                    height: 50%;
+                    height: 100%;
+
+                    font-size: 18rem;
                 }
             }
         }

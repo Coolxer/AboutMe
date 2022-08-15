@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
     background-color: ${({ theme }) => theme.palette.secondary};
 
-    //box-shadow: 2px 2px 5px 5px ${({ theme }) => theme.palette.shadow};
+    box-shadow: 2px 2px 1px 1px ${({ theme }) => theme.palette.shadow};
 
     @media ${({ theme }) => theme.device.laptop} {
         width: 45%;
@@ -27,14 +27,9 @@ export const Wrapper = styled.div`
 
     .header {
         ${mixins.flex};
-
-        width: 100%;
         padding: 10px;
 
-        font-family: ${({ theme }) => theme.font.family.roboto};
         font-size: ${({ theme }) => theme.font.size.m};
-
-        background-color: ${({ theme }) => theme.palette.secondary};
         color: ${({ theme }) => theme.palette.dominant};
 
         @media ${({ theme }) => theme.device.tablet} {
@@ -44,9 +39,6 @@ export const Wrapper = styled.div`
 
     hr {
         width: 80%;
-        height: 1px;
-
-        background-color: red;
         opacity: 0.5;
     }
 
@@ -56,8 +48,6 @@ export const Wrapper = styled.div`
 
         width: 100%;
         padding: 5px;
-
-        background-color: ${({ theme }) => theme.palette.secondary};
 
         .tech {
             padding: 10px;
@@ -74,7 +64,6 @@ export const Wrapper = styled.div`
         height: 100%;
 
         border-radius: 15px;
-
         background-color: ${({ theme }) => theme.palette.dominant};
 
         .subtitle {
@@ -90,12 +79,8 @@ export const Wrapper = styled.div`
         .description {
             padding: 20px 20px;
 
-            font-size: ${({ theme }) => theme.font.size.xs};
+            font-size: ${({ theme }) => theme.font.size.s};
             text-align: justify;
-
-            @media ${({ theme }) => theme.device.tablet} {
-                font-size: ${({ theme }) => theme.font.size.s};
-            }
         }
 
         a {

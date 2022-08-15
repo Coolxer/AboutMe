@@ -16,7 +16,12 @@ const NavigationHeader = () => {
         <Styled.Wrapper>
             <Logo grayed />
             <Hamburger onClick={toggleMobileMenu} isMenuOpen={isMenuOpen} />
-            <Menu isOpen={isMenuOpen} />
+            <Menu
+                isOpen={isMenuOpen}
+                hideMenu={() => {
+                    setIsMenuOpen(false);
+                }}
+            />
         </Styled.Wrapper>
     );
 };

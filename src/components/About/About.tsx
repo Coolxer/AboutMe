@@ -5,10 +5,10 @@ import { faPersonWalking, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import SectionHeader from 'components/SectionHeader/SectionHeader';
 import * as Styled from 'components/About/About.style';
-import MyFace from 'assets/images/my_face.svg';
+import MyFace from 'assets/images/my_face.jpg';
 
 const About = () => (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="about">
         <div className="description-wrapper">
             <SectionHeader text="about" icon={faUser as IconDefinition} />
             <div className="description">
@@ -26,10 +26,9 @@ const About = () => (
                         and certify that I like and can learn quickly.
                     </p>
                 </article>
-                <FontAwesomeIcon
-                    className="person-icon"
-                    icon={faPersonWalking as IconDefinition}
-                />
+                <div className="person-icon">
+                    <FontAwesomeIcon icon={faPersonWalking as IconDefinition} />
+                </div>
             </div>
             <div className="quote">
                 Knowledge and versality, no memory an specialization - this is

@@ -27,7 +27,7 @@ import SectionHeader from 'components/SectionHeader/SectionHeader';
 import SkillTooltip from 'components/SkillTooltip/SkillTooltip';
 
 const Skills = () => (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="skills">
         <SectionHeader
             text="skills"
             icon={faSuperpowers as IconDefinition}

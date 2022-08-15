@@ -4,10 +4,9 @@ import mixins from 'assets/styles/mixins';
 export const Wrapper = styled.section`
     ${mixins.flexCol};
     align-items: flex-start;
-    
+
     width: 100%;
     margin-top: 50px;
-
 
     @media ${({ theme }) => theme.device.tablet} {
         width: 80%;
@@ -31,7 +30,7 @@ export const Wrapper = styled.section`
 
         @media ${({ theme }) => theme.device.laptop} {
             ${mixins.flexCol};
-            flex: 1;            
+            flex: 1;
             margin-right: 50px;
         }
 
@@ -50,8 +49,8 @@ export const Wrapper = styled.section`
             }
         }
 
-        .headphones-icon-wrapper {
-            ${mixins.flex};
+        .headphones-icon {
+            display: none;
 
             position: absolute;
             left: 0;
@@ -59,21 +58,22 @@ export const Wrapper = styled.section`
 
             width: 100%;
             height: 100%;
+            font-size: 18rem;
 
             color: ${({ theme }) => theme.palette.accent};
             opacity: 0.5;
 
-            .headphones-icon {
-                font-size: 18rem;
+            @media ${({ theme }) => theme.device.laptop} {
+                ${mixins.flex};
             }
         }
     }
 
-    .contact-form {
+    form {
         ${mixins.flexCol}
 
         width: 100%;
-        flex:1;
+        flex: 1;
 
         .email,
         .message {
@@ -124,7 +124,22 @@ export const Wrapper = styled.section`
             margin: 30px 0;
 
             textarea {
-            height: 150px;
-             }
+                height: 150px;
+            }
         }
+    }
+
+    .validationMessage {
+        margin-bottom: 10px;
+
+        font-size: ${({ theme }) => theme.font.size.s};
+    }
+
+    .success {
+        color: ${({ theme }) => theme.palette.accent};
+    }
+
+    .error {
+        color: red;
+    }
 `;

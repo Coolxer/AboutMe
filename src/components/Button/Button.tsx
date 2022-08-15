@@ -10,13 +10,11 @@ type Props = {
     onClick?: () => void;
 };
 
-const Button = ({ text, icon, className, onClick }: Props) => {
-    return (
-        <Styled.Wrapper className={className} onClick={onClick}>
-            <span>{text}</span>
-            {icon && <FontAwesomeIcon className="icon" icon={icon} />}
-        </Styled.Wrapper>
-    );
-};
+const Button = ({ text, icon, className, onClick }: Props) => (
+    <Styled.Wrapper className={className} onClick={onClick}>
+        <span>{text}</span>
+        {icon && <FontAwesomeIcon className="icon" icon={icon} />}
+    </Styled.Wrapper>
+);
 
 export default Button;
