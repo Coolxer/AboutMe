@@ -51,7 +51,12 @@ const About = () => (
             <div className="profession">HELPER</div>
             <div className="empty" />
             <div className="face-image">
-                <Image src={Face} alt="my-face" layout="responsive" />
+                <Image
+                    src={Face}
+                    alt="my-face"
+                    layout="responsive"
+                    placeholder="blur"
+                />
             </div>
         </Styled.Roles>
     </Styled.Wrapper>

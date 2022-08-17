@@ -28,13 +28,19 @@ const Hero = () => (
                         src={HeroRectangles}
                         alt="rectangles"
                         layout="responsive"
+                        placeholder="blur"
                     />
                 </Styled.Rectangles>
             </div>
         </div>
         <div className="right-side">
             <div className="masked-image">
-                <Image src={MaskedFace} alt="me-masked" layout="responsive" />
+                <Image
+                    src={MaskedFace}
+                    alt="me-masked"
+                    layout="responsive"
+                    placeholder="blur"
+                />
             </div>
         </div>
     </Styled.Wrapper>

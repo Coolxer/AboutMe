@@ -17,6 +17,7 @@ const Logo = ({ grayed, colorized, className }: Props) => (
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="Logo"
             layout="fill"
+            placeholder="blur"
         />
     </Styled.Wrapper>
 );
