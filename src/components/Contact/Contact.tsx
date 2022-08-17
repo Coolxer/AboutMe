@@ -36,7 +36,7 @@ const Contact = () => {
         return true;
     };
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.MouseEvent<HTMLInputElement>) => {
         e.preventDefault();
 
         if (!validateFormData()) return;

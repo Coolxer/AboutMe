@@ -7,7 +7,7 @@ type Props = {
     icon?: IconDefinition;
     className?: string;
 
-    onClick?: () => void;
+    onClick?: (e?: any) => void;
 };
 
 const Button = ({ text, icon, className, onClick }: Props) => (
