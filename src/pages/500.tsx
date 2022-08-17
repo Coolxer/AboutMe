@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import * as Styled from 'pages/errorPage.style';
+import * as Styled from 'assets/styles/errorPage.style';
 
 const InternalServerError = () => (
     <Styled.Wrapper>
