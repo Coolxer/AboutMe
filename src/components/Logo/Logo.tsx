@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 import * as Styled from 'components/Logo/Logo.style';
-import LogoWhited from 'assets/images/logo/whited.svg';
-import LogoGrayed from 'assets/images/logo/grayed.svg';
-import LogoColorized from 'assets/images/logo/colorized.svg';
+import LogoWhited from 'assets/images/logo/whited.webp';
+import LogoGrayed from 'assets/images/logo/grayed.webp';
+import LogoColorized from 'assets/images/logo/colorized.webp';
 
 type Props = {
     grayed?: boolean;
