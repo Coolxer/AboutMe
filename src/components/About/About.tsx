@@ -31,7 +31,7 @@ const About = () => (
                 </div>
             </div>
             <div className="quote">
-                Knowledge and versality, no memory an specialization - this is
+                Knowledge and versality, no memory and specialization - this is
                 my domain.
             </div>
         </div>

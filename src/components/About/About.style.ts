@@ -14,6 +14,10 @@ export const Wrapper = styled.section`
         display: flex;
     }
 
+    @media ${({ theme }) => theme.device.tv} {
+        width: 70%;
+    }
+
     .description-wrapper {
         ${mixins.flexCol};
         flex: 1;
@@ -32,7 +36,6 @@ export const Wrapper = styled.section`
             }
 
             article {
-                ${mixins.flexCol};
                 padding: 20px;
                 flex: 1;
 

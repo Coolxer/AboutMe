@@ -10,10 +10,14 @@ export const Wrapper = styled.section`
         margin-top: 50px;
     }
 
+    @media ${({ theme }) => theme.device.tv} {
+        width: 70%;
+    }
+
     .projects-list {
         ${mixins.flexCol};
 
-        @media ${({ theme }) => theme.device.laptop} {
+        @media ${({ theme }) => theme.device.tablet} {
             flex-direction: row;
             flex-wrap: wrap;
 
@@ -23,21 +27,10 @@ export const Wrapper = styled.section`
 
         .more-link {
             ${mixins.flex};
-            width: 90%;
+            width: 100%;
 
             margin-top: 20px;
-
-            @media ${({ theme }) => theme.device.laptop} {
-                width: 45%;
-            }
-
-            @media ${({ theme }) => theme.device.desktop} {
-                width: 32%;
-            }
-
-            @media ${({ theme }) => theme.device.tv} {
-                width: 24%;
-            }
+            padding: 10px;
 
             .more-btn {
                 width: 100%;

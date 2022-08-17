@@ -20,6 +20,10 @@ export const Wrapper = styled.header`
         flex: 1;
         z-index: 2;
 
+        @media ${({ theme }) => theme.device.lapotp} {
+            margin-top: 50px;
+        }
+
         @media ${({ theme }) => theme.device.desktop} {
             justify-content: flex-end;
             margin-right: 75px;

@@ -23,9 +23,10 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
         align-items: flex-end;
 
         position: static;
-
         transform: none;
         transition: none;
+
+        margin-right: 20px;
     }
 
     ul {

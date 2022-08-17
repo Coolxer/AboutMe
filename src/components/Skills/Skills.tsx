@@ -135,9 +135,17 @@ const Skills = () => (
             />
             <article>
                 <p>
-                    Here are the basic technologies I know. There are some
-                    general things like SQL database, git, linux, python and
-                    otherwise some tech-cases like frameworks or libraries.
+                    Here are the basic technologies I know (in different
+                    levels). There are some general things like database, git,
+                    linux and otherwise some tech-cases like frameworks or
+                    libraries.
+                </p>
+                <br />
+                <p>
+                    I also have a general knowledge from engineering study like
+                    computer science architecture, networking, information
+                    looking and electronic. I know the broad terminology of the
+                    industry.
                 </p>
                 <br />
                 <p>
@@ -146,11 +154,6 @@ const Skills = () => (
                     already learned.
                 </p>
                 <br />
-                <p>
-                    I also have a general knowledge from engineering study like
-                    computer science architecture, networking, information
-                    looking and electronic.
-                </p>
             </article>
             <div className="graduate-icon">
                 <FontAwesomeIcon icon={faUserGraduate as IconDefinition} />

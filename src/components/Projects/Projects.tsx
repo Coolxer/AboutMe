@@ -4,6 +4,7 @@ import {
     faC,
     faChartColumn,
     faDiagramProject,
+    faEnvelope,
     faFolderTree,
     faFontAwesome,
     faGamepad,
@@ -36,9 +37,21 @@ const Projects = () => (
         />
         <div className="projects-list">
             <ProjectBox
+                title="This website"
+                subtitle="Portoflio next.js website"
+                description="This website describes my personality. It was created using next.js (react.js framework) with email.js service. Some of other dependencies are: Styled Components, Typescript, eslint, prettier, husky. It presents actual using technology stack, but that's not full list.  "
+                technologies={[
+                    faReact as IconDefinition,
+                    faEnvelope as IconDefinition,
+                    faFontAwesome as IconDefinition,
+                ]}
+                githubLink="https://github.com/Coolxer/aboutme"
+            />
+
+            <ProjectBox
                 title="HOP-15"
                 subtitle="Arduino-based machine control system"
-                description="This is an embedded system of very simple CNC machine for personal use of sharpening cutter tools. It uses Arduino platform. The program was written with C language from the basis. It includes not only stepper's movement but also process controlling using small screen and keyboard. "
+                description="This is an embedded system of very simple CNC machine for personal use of sharpening cutter tools. It uses Arduino platform. The program was written with C language from the basis. It process controlling using small screen and keyboard. "
                 technologies={[
                     faMicrochip as IconDefinition,
                     faGears as IconDefinition,
@@ -65,7 +78,7 @@ const Projects = () => (
             <ProjectBox
                 title="BOMPY"
                 subtitle="Simple BOM python's application"
-                description="GUI application written with Python language and tkinter library. It was one of many study's projects.  It can be used to store BOM (Bill of materials) information of product. User can add and modify structure list of ingredients stored in indicated json file. "
+                description="GUI application written with Python language and tkinter library. It was one of many study's projects.  It can be used to store BOM (Bill of materials) information of product. User can add and modify structure list of ingredients stored in indicated json file., which helps to keep tree structure."
                 technologies={[
                     faFolderTree as IconDefinition,
                     faChartColumn as IconDefinition,
@@ -77,7 +90,7 @@ const Projects = () => (
             <ProjectBox
                 title="Robox"
                 subtitle="Realtime simulation of robotic arm "
-                description="Another study's project, realized as part of student's intership. The 3D model was created in Blender, but application was made with Unity engine. Program allows to steering of robotic arm few axis with sliders manually or automaticly. User can change current camera, speed of movement and test simple inverse kinematics algorithm."
+                description="Another study's project, realized as part of student's intership. The 3D model was created in Blender, but application was made with Unity engine. Program allows to steering of robotic arm few axis with sliders manually or automaticly. User can change current camera and speed of movement"
                 technologies={[
                     faRobot as IconDefinition,
                     faUnity as IconDefinition,
@@ -89,7 +102,7 @@ const Projects = () => (
             <ProjectBox
                 title="Vis4xe"
                 subtitle="GUI application to plan small displays"
-                description="Application was created using C++ and QT ecosystem. It allows to plan strings on small embedded displays. User can add, edit and place strings on the display segments and also generate code for real display."
+                description="Application was created using C++ and QT ecosystem. It allows to plan strings on small embedded displays. User can add, edit and place strings on the display segments and also generate code for real display. It automates planning screens process and helps avoiding mistakes."
                 technologies={[
                     faTv as IconDefinition,
                     faTableColumns as IconDefinition,

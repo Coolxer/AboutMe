@@ -18,6 +18,10 @@ export const Wrapper = styled.section`
         flex-direction: row;
     }
 
+    @media ${({ theme }) => theme.device.tv} {
+        width: 70%;
+    }
+
     .mobile-header {
         @media ${({ theme }) => theme.device.laptop} {
             display: none;
@@ -42,6 +46,10 @@ export const Wrapper = styled.section`
                 font-family: ${({ theme }) => theme.font.family.roboto};
                 font-size: ${({ theme }) => theme.font.size.s};
                 text-align: justify;
+
+                span {
+                    color: ${({ theme }) => theme.palette.accent};
+                }
 
                 @media ${({ theme }) => theme.device.laptop} {
                     font-size: ${({ theme }) => theme.font.size.m};

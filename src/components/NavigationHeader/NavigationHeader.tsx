@@ -19,6 +19,7 @@ const NavigationHeader = () => {
             <Menu
                 isOpen={isMenuOpen}
                 hideMenu={() => {
+                    console.log('hidedzik');
                     setIsMenuOpen(false);
                 }}
             />

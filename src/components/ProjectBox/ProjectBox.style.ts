@@ -13,16 +13,12 @@ export const Wrapper = styled.div`
 
     box-shadow: 2px 2px 1px 1px ${({ theme }) => theme.palette.shadow};
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tablet} {
         width: 45%;
     }
 
     @media ${({ theme }) => theme.device.desktop} {
         width: 32%;
-    }
-
-    @media ${({ theme }) => theme.device.tv} {
-        width: 24%;
     }
 
     .header {

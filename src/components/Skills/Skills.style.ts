@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
 export const Wrapper = styled.section`
+    ${mixins.flexCol};
     width: 100%;
     margin-top: 50px;
 
@@ -14,8 +15,12 @@ export const Wrapper = styled.section`
     }
 
     @media ${({ theme }) => theme.device.laptop} {
-        ${mixins.flex};
+        flex-direction: row;
         align-items: flex-start;
+    }
+
+    @media ${({ theme }) => theme.device.tv} {
+        width: 70%;
     }
 
     .mobile-header {
@@ -57,20 +62,16 @@ export const Wrapper = styled.section`
     }
 
     .description {
-        display: none;
+        ${mixins.flexCol};
+        align-items: space-between;
+
         position: relative;
-        order: 1;
 
+        width: 100%;
         height: 100%;
+        flex: 1;
 
-        @media ${({ theme }) => theme.device.laptop} {
-            ${mixins.flexCol};
-            align-items: space-between;
-
-            width: 100%;
-            flex: 1;
-        }
-
+        order: 1;
         @media ${({ theme }) => theme.device.desktop} {
             margin-right: 50px;
         }
@@ -97,6 +98,10 @@ export const Wrapper = styled.section`
             p {
                 font-size: ${({ theme }) => theme.font.size.s};
                 text-align: justify;
+
+                &:last-child {
+                    color: ${({ theme }) => theme.palette.accent};
+                }
 
                 @media ${({ theme }) => theme.device.laptop} {
                     font-size: ${({ theme }) => theme.font.size.m};

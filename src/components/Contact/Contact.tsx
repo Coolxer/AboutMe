@@ -92,7 +92,7 @@ const Contact = () => {
                     <br />
                     <p>
                         If you prefer contact me directly from your post client,
-                        please write on lukasz.milos@int.pl
+                        please write on <span>lukasz.milos.it@gmail.com</span>
                     </p>
                 </article>
                 <div className="headphones-icon">
