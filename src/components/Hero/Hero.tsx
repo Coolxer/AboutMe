@@ -4,9 +4,9 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import * as Styled from 'components/Hero/Hero.style';
-import HeroRectangles from 'assets/images/hero_rectangles.jpg';
+import HeroRectangles from 'assets/images/hero_rectangles.webp';
 
-import MeMasked from 'assets/images/me_masked.png';
+import MaskedFace from 'assets/images/masked_face.webp';
 
 const Hero = () => (
     <Styled.Wrapper id="home">
@@ -34,7 +34,7 @@ const Hero = () => (
         </div>
         <div className="right-side">
             <div className="masked-image">
-                <Image src={MeMasked} alt="me-masked" layout="responsive" />
+                <Image src={MaskedFace} alt="me-masked" layout="responsive" />
             </div>
         </div>
     </Styled.Wrapper>

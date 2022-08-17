@@ -5,7 +5,7 @@ import { faPersonWalking, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import SectionHeader from 'components/SectionHeader/SectionHeader';
 import * as Styled from 'components/About/About.style';
-import MyFace from 'assets/images/my_face.jpg';
+import Face from 'assets/images/face.webp';
 
 const About = () => (
     <Styled.Wrapper id="about">
@@ -51,7 +51,7 @@ const About = () => (
             <div className="profession">HELPER</div>
             <div className="empty" />
             <div className="face-image">
-                <Image src={MyFace} alt="my-face" layout="responsive" />
+                <Image src={Face} alt="my-face" layout="responsive" />
             </div>
         </Styled.Roles>
     </Styled.Wrapper>
