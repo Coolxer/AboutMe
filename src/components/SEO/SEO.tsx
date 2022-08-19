@@ -4,7 +4,7 @@ const SEO = () => (
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
             name="description"
-            content="oPficial portfolio of IT engineer - Łukasz Miłoś"
+            content="official portfolio of IT engineer - Łukasz Miłoś"
         />
         <meta
             name="keywords"

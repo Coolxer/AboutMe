@@ -116,15 +116,21 @@ export const Wrapper = styled.section`
                     }
                 }
 
-                ul li {
-                    padding-bottom: 5px;
+                ul {
+                    li {
+                        padding-bottom: 5px;
 
-                    &:hover {
-                        cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        @media ${({ theme }) => theme.device.desktop} {
+                            font-size: ${({ theme }) => theme.font.size.s};
+                        }
                     }
 
-                    @media ${({ theme }) => theme.device.desktop} {
-                        font-size: ${({ theme }) => theme.font.size.s};
+                    .email {
+                        color: ${({ theme }) => theme.palette.accent};
                     }
                 }
             }

@@ -53,7 +53,7 @@ const About = () => (
             <div className="face-image">
                 <Image
                     src={Face}
-                    alt="my-face"
+                    alt="face"
                     layout="responsive"
                     placeholder="blur"
                 />

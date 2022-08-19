@@ -27,7 +27,7 @@ const Footer = () => (
                         <FontAwesomeIcon icon={faGithub as IconDefinition} />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/%C5%82ukasz-mi%C5%82o%C5%9B-284a5a233/"
+                        href="https://www.linkedin.com/in/lukasz-milos/"
                         target="_blank"
                         rel="noreferrer">
                         <FontAwesomeIcon icon={faLinkedin as IconDefinition} />
@@ -79,7 +79,8 @@ const Footer = () => (
                         <ul>
                             <li>Borowa, Polska</li>
                             <li>(Prefer remote)</li>
-                            <li>lukasz.milos.it@gmail.com</li>
+                            <li className="email">lukasz.milos.it</li>
+                            <li className="email">@gmail.com</li>
                         </ul>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const Logo = ({ grayed, colorized, className }: Props) => (
     <Styled.Wrapper className={className}>
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
-            alt="Logo"
+            alt="logo"
             layout="fill"
             placeholder="blur"
         />

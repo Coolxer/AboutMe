@@ -37,7 +37,7 @@ const Hero = () => (
             <div className="masked-image">
                 <Image
                     src={MaskedFace}
-                    alt="me-masked"
+                    alt="masked-face"
                     layout="responsive"
                     placeholder="blur"
                 />
