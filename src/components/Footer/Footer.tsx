@@ -23,23 +23,42 @@ const Footer = () => (
                     <a
                         href="https://github.com/Coolxer"
                         target="_blank"
-                        rel="noreferrer">
-                        <FontAwesomeIcon icon={faGithub as IconDefinition} />
+                        rel="noreferrer"
+                        aria-label="Github">
+                        <FontAwesomeIcon
+                            icon={faGithub as IconDefinition}
+                            width="16"
+                        />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/lukasz-milos/"
                         target="_blank"
-                        rel="noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin as IconDefinition} />
+                        rel="noreferrer"
+                        aria-label="Linkedin">
+                        <FontAwesomeIcon
+                            icon={faLinkedin as IconDefinition}
+                            width="16"
+                        />
                     </a>
                     <a
                         href="lukasz.milos.it@gmail.com"
                         target="_blank"
-                        rel="noreferrer">
-                        <FontAwesomeIcon icon={faAt as IconDefinition} />
+                        rel="noreferrer"
+                        aria-label="Email">
+                        <FontAwesomeIcon
+                            icon={faAt as IconDefinition}
+                            width="16"
+                        />
                     </a>
-                    <a href="cv.pdf" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faFilePdf as IconDefinition} />
+                    <a
+                        href="cv.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="CV">
+                        <FontAwesomeIcon
+                            icon={faFilePdf as IconDefinition}
+                            width="16"
+                        />
                     </a>
                 </div>
             </div>
@@ -48,7 +67,10 @@ const Footer = () => (
                     <div className="links">
                         <div className="header">
                             <span>LINKS</span>
-                            <FontAwesomeIcon icon={faLink as IconDefinition} />
+                            <FontAwesomeIcon
+                                icon={faLink as IconDefinition}
+                                width="16"
+                            />
                         </div>
                         <ul>
                             {links.map((item) => (
@@ -73,6 +95,7 @@ const Footer = () => (
                             <FontAwesomeIcon
                                 className="icon"
                                 icon={faLocation as IconDefinition}
+                                width="16"
                             />
                             <span>ADDRESS</span>
                         </div>

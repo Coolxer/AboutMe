@@ -27,7 +27,10 @@ const About = () => (
                     </p>
                 </article>
                 <div className="person-icon">
-                    <FontAwesomeIcon icon={faPersonWalking as IconDefinition} />
+                    <FontAwesomeIcon
+                        icon={faPersonWalking as IconDefinition}
+                        width="16"
+                    />
                 </div>
             </div>
             <div className="quote">
@@ -51,12 +54,7 @@ const About = () => (
             <div className="profession">HELPER</div>
             <div className="empty" />
             <div className="face-image">
-                <Image
-                    src={Face}
-                    alt="face"
-                    layout="responsive"
-                    placeholder="blur"
-                />
+                <Image src={Face} alt="face" layout="responsive" />
             </div>
         </Styled.Roles>
     </Styled.Wrapper>

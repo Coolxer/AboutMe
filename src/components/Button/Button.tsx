@@ -11,9 +11,9 @@ type Props = {
 };
 
 const Button = ({ text, icon, className, onClick }: Props) => (
-    <Styled.Wrapper className={className} onClick={onClick}>
+    <Styled.Wrapper className={className} onClick={onClick} aria-label={text}>
         <span>{text}</span>
-        {icon && <FontAwesomeIcon className="icon" icon={icon} />}
+        {icon && <FontAwesomeIcon className="icon" icon={icon} width="16" />}
     </Styled.Wrapper>
 );
 

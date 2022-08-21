@@ -28,7 +28,10 @@ const ProjectBox = ({
                 technologies.map((icon, index) => {
                     return (
                         <div key={index} className="tech">
-                            <FontAwesomeIcon icon={icon as IconDefinition} />
+                            <FontAwesomeIcon
+                                icon={icon as IconDefinition}
+                                width="16"
+                            />
                         </div>
                     );
                 })}

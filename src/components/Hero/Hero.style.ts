@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import mixins from 'assets/styles/mixins';
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.section`
     ${mixins.flex};
 
     width: 100%;
@@ -11,7 +11,6 @@ export const Wrapper = styled.header`
     color: ${({ theme }) => theme.palette.dominant};
 
     box-shadow: 2px 2px 20px 2px ${({ theme }) => theme.palette.shadow};
-    transition: all 0.2s ease-in-out;
 
     .left-side {
         ${mixins.flex};
@@ -165,8 +164,6 @@ export const Rectangles = styled.div`
     bottom: 0;
 
     width: 240px;
-
-    transition: font-size 0.2s ease-in-out;
 
     @media ${({ theme }) => theme.device.tablet} {
         position: static;

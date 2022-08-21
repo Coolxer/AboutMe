@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 
 import MainTemplate from 'templates/MainTemplate/MainTemplate';
 import Hero from 'components/Hero/Hero';
@@ -11,6 +12,9 @@ import Contact from 'components/Contact/Contact';
 const Home: NextPage = () => {
     return (
         <MainTemplate>
+            <Head>
+                <title>Łukasz Miłoś</title>
+            </Head>
             <Hero />
             <About />
             <Skills />

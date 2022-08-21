@@ -21,9 +21,6 @@ export const Wrapper = styled.button`
     
     transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 
-    @media ${({ theme }) => theme.device.tablet} {
-        //font-size: ${({ theme }) => theme.font.size.m};
-    }
 
     &:hover {
         background-color: ${({ theme }) => theme.palette.dominant};

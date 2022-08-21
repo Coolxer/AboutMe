@@ -5,7 +5,7 @@ const NotFound = () => (
     <Styled.Wrapper>
         <h1>Page not found!</h1>
         <Link href="/">
-            <a>Return to Home</a>
+            <a href="">Return to Home</a>
         </Link>
     </Styled.Wrapper>
 );

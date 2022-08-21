@@ -20,6 +20,7 @@ const Hero = () => (
                     <FontAwesomeIcon
                         className="location-icon"
                         icon={faLocationDot as IconDefinition}
+                        width="16"
                     />
                     <span>Borowa, Polska</span>
                 </Styled.LocationHeader>
@@ -28,19 +29,14 @@ const Hero = () => (
                         src={HeroRectangles}
                         alt="rectangles"
                         layout="responsive"
-                        placeholder="blur"
+                        priority
                     />
                 </Styled.Rectangles>
             </div>
         </div>
         <div className="right-side">
             <div className="masked-image">
-                <Image
-                    src={MaskedFace}
-                    alt="masked-face"
-                    layout="responsive"
-                    placeholder="blur"
-                />
+                <Image src={MaskedFace} alt="masked-face" layout="responsive" />
             </div>
         </div>
     </Styled.Wrapper>

@@ -6,7 +6,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     justify-content: space-between;
 
     position: fixed;
-    left: 0;
+    left: -100%;
     top: 80px;
 
     width: 100%;
@@ -85,7 +85,8 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
 
                     @media ${({ theme }) => theme.device.tablet} {
                         background-color: ${({ theme }) =>
-        theme.palette.accent};
+    // eslint-disable-next-line indent
+                            theme.palette.accent};
 
                         transition: none;
                     }

@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Hamburger = ({ isMenuOpen, onClick }: Props) => (
-    <Styled.Hamburger onClick={onClick}>
+    <Styled.Hamburger onClick={onClick} aria-label="Hamburger">
         <Styled.Icon icon={faBars as IconDefinition} open={isMenuOpen} />
     </Styled.Hamburger>
 );

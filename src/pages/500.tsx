@@ -5,7 +5,7 @@ const InternalServerError = () => (
     <Styled.Wrapper>
         <h1>An internal server error has occurred!</h1>
         <Link href="/">
-            <a>Return to Home</a>
+            <a href="">Return to Home</a>
         </Link>
     </Styled.Wrapper>
 );

@@ -11,7 +11,7 @@ type Props = {
 const SkillTooltip = ({ icon, text }: Props) => (
     <Styled.Wrapper>
         <div className="icon-wrapper">
-            <FontAwesomeIcon icon={icon} />
+            <FontAwesomeIcon icon={icon} width="16" />
         </div>
         <div className="tooltip">{text}</div>
     </Styled.Wrapper>

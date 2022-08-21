@@ -11,7 +11,7 @@ type Props = {
 const SectionHeader = ({ text, icon, className }: Props) => (
     <Styled.Wrapper className={className}>
         <span>{text.toUpperCase()}</span>
-        <FontAwesomeIcon icon={icon} className="icon" />
+        <FontAwesomeIcon icon={icon} className="icon" width="16" />
     </Styled.Wrapper>
 );
 

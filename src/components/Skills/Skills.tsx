@@ -156,7 +156,10 @@ const Skills = () => (
                 <br />
             </article>
             <div className="graduate-icon">
-                <FontAwesomeIcon icon={faUserGraduate as IconDefinition} />
+                <FontAwesomeIcon
+                    icon={faUserGraduate as IconDefinition}
+                    width="16"
+                />
             </div>
         </div>
     </Styled.Wrapper>
