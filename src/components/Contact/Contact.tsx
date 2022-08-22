@@ -96,10 +96,7 @@ const Contact = () => {
                     </p>
                 </article>
                 <div className="headphones-icon">
-                    <FontAwesomeIcon
-                        icon={faHeadphones as IconDefinition}
-                        width="16"
-                    />
+                    <FontAwesomeIcon icon={faHeadphones as IconDefinition} />
                 </div>
             </div>
             <form>
@@ -109,7 +106,6 @@ const Contact = () => {
                         <FontAwesomeIcon
                             icon={faAt as IconDefinition}
                             className="icon"
-                            width="16"
                         />
                     </label>
                     <input
@@ -127,7 +123,6 @@ const Contact = () => {
                         <FontAwesomeIcon
                             icon={faMessage as IconDefinition}
                             className="icon"
-                            width="16"
                         />
                     </label>
                     <textarea

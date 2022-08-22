@@ -20,7 +20,6 @@ const Hero = () => (
                     <FontAwesomeIcon
                         className="location-icon"
                         icon={faLocationDot as IconDefinition}
-                        width="16"
                     />
                     <span>Borowa, Polska</span>
                 </Styled.LocationHeader>

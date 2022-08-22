@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    src: local(''), url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf'),
+        url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Caveat';
+    font-display: swap;
+    src: local(''), url('../fonts/Caveat/Caveat-Regular.ttf') format('ttf'),
+        url('../fonts/Caveat/Caveat-Regular.ttf') format('ttf');
+}

@@ -27,10 +27,7 @@ const About = () => (
                     </p>
                 </article>
                 <div className="person-icon">
-                    <FontAwesomeIcon
-                        icon={faPersonWalking as IconDefinition}
-                        width="16"
-                    />
+                    <FontAwesomeIcon icon={faPersonWalking as IconDefinition} />
                 </div>
             </div>
             <div className="quote">
