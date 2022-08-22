@@ -13,7 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 1500);
+        }, 1000);
     }, []);
     return (
         <ThemeProvider theme={theme}>

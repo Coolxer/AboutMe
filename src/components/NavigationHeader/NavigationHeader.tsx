@@ -6,7 +6,7 @@ import Hamburger from 'components/Hamburger/Hamburger';
 import Menu from 'components/Menu/Menu';
 
 const NavigationHeader = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const toggleMobileMenu = () => {
         setIsMenuOpen(!isMenuOpen);

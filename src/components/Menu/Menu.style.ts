@@ -6,7 +6,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
     justify-content: space-between;
 
     position: fixed;
-    left: -100%;
+    left: 0;
     top: 80px;
 
     width: 100%;

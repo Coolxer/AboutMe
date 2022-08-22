@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
         border-top: 12px solid ${({ theme }) => theme.palette.accent};
         border-radius: 50%;
 
-        animation: spinning 1.5s linear infinite;
+        animation: spinning 1s linear infinite;
     }
 
     .text {
