@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
     position: relative;
 
     width: 60px;

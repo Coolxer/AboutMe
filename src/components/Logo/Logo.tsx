@@ -12,7 +12,14 @@ type Props = {
 };
 
 const Logo = ({ grayed, colorized, className }: Props) => (
-    <Styled.Wrapper className={className}>
+    <Styled.Wrapper
+        className={className}
+        activeClass="active"
+        to="home"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}>
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="logo"

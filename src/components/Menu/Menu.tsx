@@ -1,7 +1,7 @@
 import * as Styled from 'components/Menu/Menu.style';
 import { Link } from 'react-scroll';
 
-const items = ['home', 'about', 'skills', 'projects', 'hobbies', 'contact'];
+const items = ['about', 'skills', 'projects', 'hobbies', 'contact'];
 
 type Props = {
     isOpen: boolean;

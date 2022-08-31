@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Styled from 'components/Footer/Footer.style';
 import Logo from 'components/Logo/Logo';
 
-const links = ['home', 'about', 'skills', 'projects', 'hobbies', 'contact'];
+const links = ['about', 'skills', 'projects', 'hobbies', 'contact'];
 
 const Footer = () => (
     <Styled.Wrapper>
