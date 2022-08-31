@@ -9,9 +9,10 @@ type Props = {
     grayed?: boolean;
     colorized?: boolean;
     className?: string;
+    onClick?: () => void;
 };
 
-const Logo = ({ grayed, colorized, className }: Props) => (
+const Logo = ({ grayed, colorized, className, onClick }: Props) => (
     <Styled.Wrapper
         className={className}
         activeClass="active"
@@ -19,7 +20,8 @@ const Logo = ({ grayed, colorized, className }: Props) => (
         spy={true}
         smooth={true}
         offset={-100}
-        duration={500}>
+        duration={500}
+        onClick={onClick}>
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
             alt="logo"
