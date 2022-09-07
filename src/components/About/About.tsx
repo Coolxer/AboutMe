@@ -51,7 +51,7 @@ const About = () => (
             <div className="profession">HELPER</div>
             <div className="empty" />
             <div className="face-image">
-                <Image src={Face} alt="face" layout="responsive" />
+                <Image src={Face} alt="" layout="responsive" />
             </div>
         </Styled.Roles>
     </Styled.Wrapper>

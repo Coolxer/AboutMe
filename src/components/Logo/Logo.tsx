@@ -24,7 +24,7 @@ const Logo = ({ grayed, colorized, className, onClick }: Props) => (
         onClick={onClick}>
         <Image
             src={grayed ? LogoGrayed : colorized ? LogoColorized : LogoWhited}
-            alt="logo"
+            alt=""
             layout="fill"
         />
     </Styled.Wrapper>

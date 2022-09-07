@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     width: 100vw;
     min-height: 100vh;
 
-    font-family: ${({ theme }) => theme.font.family.roboto};
+    font-family: ${({ theme }) => theme.font.family.ubuntu};
 
     background-color: ${({ theme }) => theme.palette.dominant};
     color: ${({ theme }) => theme.palette.secondary};

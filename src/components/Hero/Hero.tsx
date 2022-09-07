@@ -26,7 +26,7 @@ const Hero = () => (
                 <Styled.Rectangles>
                     <Image
                         src={HeroRectangles}
-                        alt="rectangles"
+                        alt=""
                         layout="responsive"
                         priority
                     />
@@ -35,7 +35,7 @@ const Hero = () => (
         </div>
         <div className="right-side">
             <div className="masked-image">
-                <Image src={MaskedFace} alt="masked-face" layout="responsive" />
+                <Image src={MaskedFace} alt="" layout="responsive" />
             </div>
         </div>
     </Styled.Wrapper>

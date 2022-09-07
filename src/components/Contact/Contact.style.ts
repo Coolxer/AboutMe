@@ -43,7 +43,7 @@ export const Wrapper = styled.section`
             padding: 10px;
 
             p {
-                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-family: ${({ theme }) => theme.font.family.ubuntu};
                 font-size: ${({ theme }) => theme.font.size.s};
                 text-align: justify;
 
@@ -99,7 +99,7 @@ export const Wrapper = styled.section`
                 width: 100%;
                 padding: 10px;
 
-                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-family: ${({ theme }) => theme.font.family.ubuntu};
                 font-size: ${({ theme }) => theme.font.size.m};
 
                 background-color: ${({ theme }) => theme.palette.secondary};
@@ -119,7 +119,7 @@ export const Wrapper = styled.section`
                 margin-top: 20px;
                 padding: 10px;
 
-                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-family: ${({ theme }) => theme.font.family.ubuntu};
                 font-size: ${({ theme }) => theme.font.size.xs};
             }
         }

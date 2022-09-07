@@ -11,7 +11,7 @@ export const Wrapper = styled.button`
     border: 3px solid ${({ theme }) => theme.palette.accent}};
     border-radius: 50px;
 
-    font-family: ${({ theme }) => theme.font.family.roboto};
+    font-family: ${({ theme }) => theme.font.family.ubuntu};
     font-size: ${({ theme }) => theme.font.size.s};
 
     background-color: ${({ theme }) => theme.palette.accent};

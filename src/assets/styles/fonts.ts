@@ -10,7 +10,7 @@ const font = {
         xxxl: '8.4rem',
     },
     family: {
-        roboto: "'Roboto', sans-serif",
+        ubuntu: 'Ubuntu',
         indie: "'Indie Flower', cursive",
     },
 };

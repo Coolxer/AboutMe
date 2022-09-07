@@ -53,7 +53,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
 
                 border: 5px solid ${({ theme }) => theme.palette.secondary};
 
-                font-family: ${({ theme }) => theme.font.family.roboto};
+                font-family: ${({ theme }) => theme.font.family.ubuntu};
                 font-size: ${({ theme }) => theme.font.size.l};
                 text-decoration: none;
 

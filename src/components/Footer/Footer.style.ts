@@ -17,7 +17,7 @@ export const Wrapper = styled.section`
 
         width: 100%;
 
-        font-family: ${({ theme }) => theme.font.family.roboto};
+        font-family: ${({ theme }) => theme.font.family.ubuntu};
         box-shadow: 0 0 20px -2px ${({ theme }) => theme.palette.shadow};
 
         @media ${({ theme }) => theme.device.tablet} {
@@ -93,7 +93,7 @@ export const Wrapper = styled.section`
             width: 100%;
             margin-top: 20px;
 
-            font-family: ${({ theme }) => theme.font.family.roboto};
+            font-family: ${({ theme }) => theme.font.family.ubuntu};
             color: ${({ theme }) => theme.palette.dominant};
 
             ul {
