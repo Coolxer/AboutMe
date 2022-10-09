@@ -206,6 +206,7 @@ export const Wrapper = styled.section`
         height: 40px;
 
         font-size: ${({ theme }) => theme.font.size.xs};
+        text-align: center;
 
         background-color: ${({ theme }) => theme.palette.accent};
         color: ${({ theme }) => theme.palette.secondary};

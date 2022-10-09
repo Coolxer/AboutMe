@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as Styled from 'components/NavigationHeader/NavigationHeader.style';
 
 import Logo from 'components/Logo/Logo';
@@ -15,6 +15,11 @@ const NavigationHeader = () => {
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
+
+    useEffect(() => {
+        if (isMenuOpen) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = 'scroll';
+    });
 
     return (
         <Styled.Wrapper>

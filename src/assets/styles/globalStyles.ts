@@ -15,6 +15,10 @@ export const GlobalStyles = styled.createGlobalStyle`
 
     body {
         font-size: 1.6rem; // restore basic 16px font-size
+
+        @media screen and (min-width: 1024px) {
+            overflow: scroll !important;
+        }
     }
 
     h1,

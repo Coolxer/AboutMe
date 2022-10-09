@@ -64,7 +64,7 @@ export const Wrapper = styled.section`
             opacity: 0.2;
 
             @media ${({ theme }) => theme.device.laptop} {
-                width: 75%;
+                width: 60%;
                 max-width: 480px;
 
                 opacity: 1;
@@ -79,13 +79,12 @@ export const Wrapper = styled.section`
 
 export const HelloHeader = styled.h1`
     font-size: ${({ theme }) => theme.font.size.xl};
-    transition: font-size 0.2s ease-in-out;
 
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.xxl};
     }
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tv} {
         font-size: ${({ theme }) => theme.font.size.xxxl};
     }
 `;
@@ -99,39 +98,35 @@ export const NameHeader = styled.h1`
     background-color: ${({ theme }) => theme.palette.accent};
     color: ${({ theme }) => theme.palette.secondary};
 
-    transition: font-size 0.2s ease-in-out;
-
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.xxl};
     }
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tv} {
         font-size: ${({ theme }) => theme.font.size.xxxl};
     }
 `;
 
 export const ProfessionHeader = styled.h2`
     font-size: ${({ theme }) => theme.font.size.m};
-    transition: font-size 0.2s ease-in-out;
 
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.l};
     }
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tv} {
         font-size: ${({ theme }) => theme.font.size.xl};
     }
 `;
 
 export const HobbyHeader = styled.h3`
     font-size: ${({ theme }) => theme.font.size.s};
-    transition: font-size 0.2s ease-in-out;
 
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.m};
     }
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tv} {
         font-size: ${({ theme }) => theme.font.size.l};
     }
 `;
@@ -142,13 +137,11 @@ export const LocationHeader = styled.h4`
     font-size: ${({ theme }) => theme.font.size.xs};
     color: ${({ theme }) => theme.palette.accent};
 
-    transition: font-size 0.2s ease-in-out;
-
     @media ${({ theme }) => theme.device.tablet} {
         font-size: ${({ theme }) => theme.font.size.s};
     }
 
-    @media ${({ theme }) => theme.device.laptop} {
+    @media ${({ theme }) => theme.device.tv} {
         font-size: ${({ theme }) => theme.font.size.m};
     }
 
