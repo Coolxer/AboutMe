@@ -5,11 +5,16 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import * as Styled from 'components/ProjectBox/ProjectBox.style';
 import Button from 'components/Button/Button';
 
+interface Technology {
+    icon: IconDefinition;
+    tooltip: string;
+}
+
 type Props = {
     title: string;
     subtitle: string;
     description: string;
-    technologies?: IconDefinition[];
+    technologies?: Technology[];
     githubLink: string;
 };
 
@@ -25,10 +30,15 @@ const ProjectBox = ({
         <hr />
         <div className="technologies">
             {technologies &&
-                technologies.map((icon, index) => {
+                technologies.map((technology, index) => {
                     return (
-                        <div key={index} className="tech">
-                            <FontAwesomeIcon icon={icon as IconDefinition} />
+                        <div
+                            key={index}
+                            className="tech"
+                            title={technology.tooltip}>
+                            <FontAwesomeIcon
+                                icon={technology.icon as IconDefinition}
+                            />
                         </div>
                     );
                 })}

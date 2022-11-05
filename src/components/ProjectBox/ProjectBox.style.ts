@@ -27,10 +27,6 @@ export const Wrapper = styled.div`
 
         font-size: ${({ theme }) => theme.font.size.m};
         color: ${({ theme }) => theme.palette.dominant};
-
-        @media ${({ theme }) => theme.device.tablet} {
-            font-size: ${({ theme }) => theme.font.size.l};
-        }
     }
 
     hr {
@@ -48,7 +44,7 @@ export const Wrapper = styled.div`
         .tech {
             padding: 10px;
 
-            font-size: ${({ theme }) => theme.font.size.l};
+            font-size: ${({ theme }) => theme.font.size.m};
             color: ${({ theme }) => theme.palette.accent};
         }
     }
@@ -75,7 +71,7 @@ export const Wrapper = styled.div`
         .description {
             padding: 20px 20px;
 
-            font-size: ${({ theme }) => theme.font.size.s};
+            font-size: ${({ theme }) => theme.font.size.xs};
             text-align: justify;
         }
 

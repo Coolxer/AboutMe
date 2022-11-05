@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
         height: 50px;
         margin-top: 20px;
 
-        font-size: ${({ theme }) => theme.font.size.m};
+        font-size: ${({ theme }) => theme.font.size.s};
         text-decoration: none;
 
         background-color: ${({ theme }) => theme.palette.accent};

@@ -5,6 +5,7 @@ import {
     faGit,
     faHtml5,
     faJs,
+    faLaravel,
     faLinux,
     faPhp,
     faPython,
@@ -12,7 +13,6 @@ import {
     faSass,
     faSuperpowers,
     faTrello,
-    faVuejs,
     faWordpress,
 } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -48,19 +48,15 @@ const Skills = () => (
                     />
                 </div>
                 <div className="skill-col">
-                    <SkillTooltip
-                        icon={faJs as IconDefinition}
-                        text="JavaScript"
-                    />
+                    <SkillTooltip icon={faSass as IconDefinition} text="Sass" />
                 </div>
             </div>
+
             <hr />
+
             <div className="skills-row">
                 <div className="skill-col">
                     <SkillTooltip icon={faPhp as IconDefinition} text="PHP" />
-                </div>
-                <div className="skill-col">
-                    <SkillTooltip icon={faSass as IconDefinition} text="SASS" />
                 </div>
                 <div className="skill-col">
                     <SkillTooltip
@@ -68,29 +64,39 @@ const Skills = () => (
                         text="Database"
                     />
                 </div>
+                <div className="skill-col">
+                    <SkillTooltip
+                        icon={faLaravel as IconDefinition}
+                        text="Laravel 9"
+                    />
+                </div>
             </div>
+
             <hr />
+
             <div className="skills-row">
-                <div className="skill-col">
-                    <SkillTooltip
-                        icon={faReact as IconDefinition}
-                        text="ReactJS"
-                    />
-                </div>
-                <div className="skill-col">
-                    <SkillTooltip
-                        icon={faVuejs as IconDefinition}
-                        text="Vue.js"
-                    />
-                </div>
                 <div className="skill-col">
                     <SkillTooltip
                         icon={faWordpress as IconDefinition}
                         text="WordPress"
                     />
                 </div>
+                <div className="skill-col">
+                    <SkillTooltip
+                        icon={faJs as IconDefinition}
+                        text="JavaScript"
+                    />
+                </div>
+                <div className="skill-col">
+                    <SkillTooltip
+                        icon={faReact as IconDefinition}
+                        text="ReactJS"
+                    />
+                </div>
             </div>
+
             <hr />
+
             <div className="skills-row">
                 <div className="skill-col">
                     <SkillTooltip
@@ -108,7 +114,9 @@ const Skills = () => (
                     />
                 </div>
             </div>
+
             <hr />
+
             <div className="skills-row">
                 <div className="skill-col">
                     <SkillTooltip icon={faGit as IconDefinition} text="Git" />
@@ -127,6 +135,7 @@ const Skills = () => (
                 </div>
             </div>
         </div>
+
         <div className="description">
             <SectionHeader
                 text="skills"

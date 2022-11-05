@@ -42,10 +42,6 @@ export const Wrapper = styled.section`
                 p {
                     font-size: ${({ theme }) => theme.font.size.s};
                     text-align: justify;
-
-                    @media ${({ theme }) => theme.device.laptop} {
-                        font-size: ${({ theme }) => theme.font.size.m};
-                    }
                 }
             }
 
@@ -85,14 +81,14 @@ export const Wrapper = styled.section`
         padding: 5px;
 
         font-family: ${({ theme }) => theme.font.family.indie};
-        font-size: ${({ theme }) => theme.font.size.m};
+        font-size: ${({ theme }) => theme.font.size.s};
         text-align: center;
 
         background-color: ${({ theme }) => theme.palette.secondary};
         color: ${({ theme }) => theme.palette.accent};
 
         @media ${({ theme }) => theme.device.tv} {
-            font-size: ${({ theme }) => theme.font.size.l};
+            font-size: ${({ theme }) => theme.font.size.m};
         }
     }
 `;
@@ -110,6 +106,7 @@ export const Roles = styled.div`
     @media ${({ theme }) => theme.device.desktop} {
         flex: 1;
         order: 1;
+        gap: 10px;
 
         margin-top: 0;
         margin-right: 50px;

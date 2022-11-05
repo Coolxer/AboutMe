@@ -77,10 +77,6 @@ export const Wrapper = styled.section`
                         flex: 50%;
                         padding: 10px;
                     }
-
-                    @media ${({ theme }) => theme.device.desktop} {
-                        font-size: ${({ theme }) => theme.font.size.xl};
-                    }
                 }
             }
         }
@@ -122,10 +118,6 @@ export const Wrapper = styled.section`
 
                         &:hover {
                             cursor: pointer;
-                        }
-
-                        @media ${({ theme }) => theme.device.desktop} {
-                            font-size: ${({ theme }) => theme.font.size.s};
                         }
                     }
 

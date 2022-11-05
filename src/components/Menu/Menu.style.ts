@@ -3,7 +3,7 @@ import mixins from 'assets/styles/mixins';
 
 export const Menu = styled.nav<{ isOpen: boolean }>`
     ${mixins.flexCol};
-    justify-content: space-between;
+    justify-content: center;
 
     position: fixed;
     left: 0;
@@ -54,7 +54,7 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                 border: 5px solid ${({ theme }) => theme.palette.secondary};
 
                 font-family: ${({ theme }) => theme.font.family.ubuntu};
-                font-size: ${({ theme }) => theme.font.size.l};
+                font-size: ${({ theme }) => theme.font.size.m};
                 text-decoration: none;
 
                 background-color: ${({ theme }) => theme.palette.secondary};
@@ -70,10 +70,6 @@ export const Menu = styled.nav<{ isOpen: boolean }>`
                     box-shadow: none;
 
                     font-size: ${({ theme }) => theme.font.size.s};
-                }
-
-                @media ${({ theme }) => theme.device.laptop} {
-                    font-size: ${({ theme }) => theme.font.size.m};
                 }
 
                 &:hover {

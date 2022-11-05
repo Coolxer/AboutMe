@@ -50,10 +50,6 @@ export const Wrapper = styled.section`
                 span {
                     color: ${({ theme }) => theme.palette.accent};
                 }
-
-                @media ${({ theme }) => theme.device.laptop} {
-                    font-size: ${({ theme }) => theme.font.size.m};
-                }
             }
         }
 
@@ -100,7 +96,7 @@ export const Wrapper = styled.section`
                 padding: 10px;
 
                 font-family: ${({ theme }) => theme.font.family.ubuntu};
-                font-size: ${({ theme }) => theme.font.size.m};
+                font-size: ${({ theme }) => theme.font.size.s};
 
                 background-color: ${({ theme }) => theme.palette.secondary};
                 color: ${({ theme }) => theme.palette.dominant};
@@ -109,7 +105,7 @@ export const Wrapper = styled.section`
                     position: absolute;
                     right: 10px;
 
-                    font-size: ${({ theme }) => theme.font.size.l};
+                    font-size: ${({ theme }) => theme.font.size.m};
                 }
             }
 

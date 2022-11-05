@@ -36,25 +36,28 @@ const Hobby = () => (
                         </p>
                     </article>
                 </div>
-                <div className="hobby-item">
-                    <span>CNC</span>
-                    <article>
-                        This interest came mainly from youtube videos, As well
-                        as from a previous love of mechanics and electronics,
-                        resulting in the creation of first a simple numerically
-                        controlled machine, and subsequently already a
-                        full-fledged CNC multitasking machine. This includes
-                        GCODE programming as part of the main development path.
-                    </article>
-                </div>
-                <div className="hobby-item">
-                    <span>Voleyball, Football, Cycling</span>
-                    <article>
-                        Outside the industry, I am interested in sports, and
-                        even practice them in an amateur way. I enjoy volleyball
-                        and soccer, and in my free time I explore the beautiful
-                        countryside by bicycle.
-                    </article>
+                <div className="hobby-items">
+                    <div className="hobby-item">
+                        <span>CNC</span>
+                        <article>
+                            This interest came mainly from youtube videos, As
+                            well as from a previous love of mechanics and
+                            electronics, resulting in the creation of first a
+                            simple numerically controlled machine, and
+                            subsequently already a full-fledged CNC multitasking
+                            machine. This includes GCODE programming as part of
+                            the main development path.
+                        </article>
+                    </div>
+                    <div className="hobby-item">
+                        <span>Voleyball, Football, Cycling</span>
+                        <article>
+                            Outside the industry, I am interested in sports, and
+                            even practice them in an amateur way. I enjoy
+                            volleyball and soccer, and in my free time I explore
+                            the beautiful countryside by bicycle.
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>

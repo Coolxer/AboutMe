@@ -5,6 +5,7 @@ import Footer from 'components/Footer/Footer';
 
 const Wrapper = styled.div`
     width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
 
     font-family: ${({ theme }) => theme.font.family.ubuntu};

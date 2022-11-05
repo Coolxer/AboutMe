@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
 
     .text {
         margin-top: 20px;
-        font-size: ${({ theme }) => theme.font.size.l};
+        font-size: ${({ theme }) => theme.font.size.m};
     }
 
     @keyframes discovering {

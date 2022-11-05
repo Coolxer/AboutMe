@@ -17,16 +17,11 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.palette.dominant};
     box-shadow: 0 0 10px 0 ${({ theme }) => theme.palette.shadow};
 
-    @media ${({ theme }) => theme.device.laptop} {
-        height: 90px;
-        font-size: ${({ theme }) => theme.font.size.xl};
-    }
-
     .icon {
         position: absolute;
         right: 0;
 
         padding-right: 10px;
-        font-size: ${({ theme }) => theme.font.size.xl};
+        font-size: ${({ theme }) => theme.font.size.l};
     }
 `;

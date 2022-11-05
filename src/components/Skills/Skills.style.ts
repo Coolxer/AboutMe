@@ -102,10 +102,6 @@ export const Wrapper = styled.section`
                 &:last-child {
                     color: ${({ theme }) => theme.palette.accent};
                 }
-
-                @media ${({ theme }) => theme.device.laptop} {
-                    font-size: ${({ theme }) => theme.font.size.m};
-                }
             }
         }
 

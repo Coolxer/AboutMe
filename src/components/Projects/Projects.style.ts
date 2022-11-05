@@ -32,12 +32,20 @@ export const Wrapper = styled.section`
             margin-top: 20px;
             padding: 10px;
 
+            @media ${({ theme }) => theme.device.tablet} {
+                width: 50%;
+            }
+
+            @media ${({ theme }) => theme.device.desktop} {
+                width: 33%;
+            }
+
             .more-btn {
                 width: 100%;
                 height: 200px;
 
                 span {
-                    font-size: ${({ theme }) => theme.font.size.l};
+                    font-size: ${({ theme }) => theme.font.size.m};
                     color: ${({ theme }) => theme.palette.secondary};
 
                     z-index: 2;
@@ -50,6 +58,15 @@ export const Wrapper = styled.section`
                     z-index: 1;
                     opacity: 0.5;
                 }
+            }
+        }
+
+        .empty-project {
+            display: none;
+
+            @media ${({ theme }) => theme.device.desktop} {
+                display: block;
+                width: 33%;
             }
         }
     }

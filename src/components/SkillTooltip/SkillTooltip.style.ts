@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     width: 100px;
     padding: 10px;
 
-    font-size: ${({ theme }) => theme.font.size.xxl};
+    font-size: ${({ theme }) => theme.font.size.xl};
 
     &:hover {
         cursor: pointer;
